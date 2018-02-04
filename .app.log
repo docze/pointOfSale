@@ -1,0 +1,1029 @@
+2018-02-03 21:44:48 DEBUG QuerySpacesImpl:174 - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@5f212d84]
+2018-02-03 21:44:48 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : imgUrl
+2018-02-03 21:44:48 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : meals
+2018-02-03 21:44:48 DEBUG QuerySpacesImpl:174 - Adding QuerySpace : uid = <gen:1> -> org.hibernate.loader.plan.build.internal.spaces.CollectionQuerySpaceImpl@6b9c69a9]
+2018-02-03 21:44:48 DEBUG QuerySpacesImpl:174 - Adding QuerySpace : uid = <gen:2> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@6622a690]
+2018-02-03 21:44:48 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : name
+2018-02-03 21:44:48 DEBUG FetchStyleLoadPlanBuildingAssociationVisitationStrategy:150 - Building LoadPlan...
+2018-02-03 21:44:48 DEBUG LoadQueryJoinAndFetchProcessor:101 - processing queryspace <gen:0>
+2018-02-03 21:44:48 DEBUG LoadPlanTreePrinter:55 - LoadPlan(entity=pl.woonkievitch.domain.Category)
+    - Returns
+       - EntityReturnImpl(entity=pl.woonkievitch.domain.Category, querySpaceUid=<gen:0>, path=pl.woonkievitch.domain.Category)
+          - CollectionAttributeFetchImpl(collection=pl.woonkievitch.domain.Category.meals, querySpaceUid=<gen:1>, path=pl.woonkievitch.domain.Category.meals)
+             - (collection element) CollectionFetchableElementEntityGraph(entity=pl.woonkievitch.domain.Meal, querySpaceUid=<gen:2>, path=pl.woonkievitch.domain.Category.meals.<elements>)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=pl.woonkievitch.domain.Category)
+          - SQL table alias mapping - category0_
+          - alias suffix - 0_
+          - suffixed key columns - {id1_0_0_}
+
+2018-02-03 21:44:48 DEBUG EntityLoader:115 - Static select for entity pl.woonkievitch.domain.Category [OPTIMISTIC]: select category0_.id as id1_0_0_, category0_.imgUrl as imgUrl2_0_0_, category0_.name as name3_0_0_ from Category category0_ where category0_.id=?
+2018-02-03 21:44:48 DEBUG QuerySpacesImpl:174 - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@30b9eadd]
+2018-02-03 21:44:48 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : imgUrl
+2018-02-03 21:44:48 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : meals
+2018-02-03 21:44:48 DEBUG QuerySpacesImpl:174 - Adding QuerySpace : uid = <gen:1> -> org.hibernate.loader.plan.build.internal.spaces.CollectionQuerySpaceImpl@412c995d]
+2018-02-03 21:44:48 DEBUG QuerySpacesImpl:174 - Adding QuerySpace : uid = <gen:2> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@3249a1ce]
+2018-02-03 21:44:48 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : name
+2018-02-03 21:44:48 DEBUG FetchStyleLoadPlanBuildingAssociationVisitationStrategy:150 - Building LoadPlan...
+2018-02-03 21:44:48 DEBUG LoadQueryJoinAndFetchProcessor:101 - processing queryspace <gen:0>
+2018-02-03 21:44:48 DEBUG LoadPlanTreePrinter:55 - LoadPlan(entity=pl.woonkievitch.domain.Category)
+    - Returns
+       - EntityReturnImpl(entity=pl.woonkievitch.domain.Category, querySpaceUid=<gen:0>, path=pl.woonkievitch.domain.Category)
+          - CollectionAttributeFetchImpl(collection=pl.woonkievitch.domain.Category.meals, querySpaceUid=<gen:1>, path=pl.woonkievitch.domain.Category.meals)
+             - (collection element) CollectionFetchableElementEntityGraph(entity=pl.woonkievitch.domain.Meal, querySpaceUid=<gen:2>, path=pl.woonkievitch.domain.Category.meals.<elements>)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=pl.woonkievitch.domain.Category)
+          - SQL table alias mapping - category0_
+          - alias suffix - 0_
+          - suffixed key columns - {id1_0_0_}
+
+2018-02-03 21:44:48 DEBUG EntityLoader:115 - Static select for entity pl.woonkievitch.domain.Category [OPTIMISTIC_FORCE_INCREMENT]: select category0_.id as id1_0_0_, category0_.imgUrl as imgUrl2_0_0_, category0_.name as name3_0_0_ from Category category0_ where category0_.id=?
+2018-02-03 21:44:48 DEBUG Loader:38 - Static select for action ACTION_MERGE on entity pl.woonkievitch.domain.Category: select category0_.id as id1_0_0_, category0_.imgUrl as imgUrl2_0_0_, category0_.name as name3_0_0_ from Category category0_ where category0_.id=?
+2018-02-03 21:44:48 DEBUG Loader:38 - Static select for action ACTION_REFRESH on entity pl.woonkievitch.domain.Category: select category0_.id as id1_0_0_, category0_.imgUrl as imgUrl2_0_0_, category0_.name as name3_0_0_ from Category category0_ where category0_.id=?
+2018-02-03 21:44:48 DEBUG AbstractEntityPersister:3608 - Static SQL for entity: pl.woonkievitch.domain.Meal
+2018-02-03 21:44:48 DEBUG AbstractEntityPersister:3613 -  Version select: select id from Meal where id =?
+2018-02-03 21:44:48 DEBUG AbstractEntityPersister:3616 -  Snapshot select: select meal_.id, meal_.imgUrl as imgUrl2_1_, meal_.kcal as kcal3_1_, meal_.name as name4_1_, meal_.price as price5_1_ from Meal meal_ where meal_.id=?
+2018-02-03 21:44:48 DEBUG AbstractEntityPersister:394 -  Insert 0: insert into Meal (imgUrl, kcal, name, price, id) values (?, ?, ?, ?, ?)
+2018-02-03 21:44:48 DEBUG AbstractEntityPersister:394 -  Update 0: update Meal set imgUrl=?, kcal=?, name=?, price=? where id=?
+2018-02-03 21:44:48 DEBUG AbstractEntityPersister:394 -  Delete 0: delete from Meal where id=?
+2018-02-03 21:44:48 DEBUG QuerySpacesImpl:174 - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@4dd94a58]
+2018-02-03 21:44:48 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : imgUrl
+2018-02-03 21:44:48 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : kcal
+2018-02-03 21:44:48 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : name
+2018-02-03 21:44:48 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : orderList
+2018-02-03 21:44:48 DEBUG QuerySpacesImpl:174 - Adding QuerySpace : uid = <gen:1> -> org.hibernate.loader.plan.build.internal.spaces.CollectionQuerySpaceImpl@a8a8b75]
+2018-02-03 21:44:48 DEBUG QuerySpacesImpl:174 - Adding QuerySpace : uid = <gen:2> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@75b21c3b]
+2018-02-03 21:44:48 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : price
+2018-02-03 21:44:48 DEBUG FetchStyleLoadPlanBuildingAssociationVisitationStrategy:150 - Building LoadPlan...
+2018-02-03 21:44:48 DEBUG LoadQueryJoinAndFetchProcessor:101 - processing queryspace <gen:0>
+2018-02-03 21:44:48 DEBUG LoadPlanTreePrinter:55 - LoadPlan(entity=pl.woonkievitch.domain.Meal)
+    - Returns
+       - EntityReturnImpl(entity=pl.woonkievitch.domain.Meal, querySpaceUid=<gen:0>, path=pl.woonkievitch.domain.Meal)
+          - CollectionAttributeFetchImpl(collection=pl.woonkievitch.domain.Meal.orderList, querySpaceUid=<gen:1>, path=pl.woonkievitch.domain.Meal.orderList)
+             - (collection element) CollectionFetchableElementEntityGraph(entity=pl.woonkievitch.domain.Orders, querySpaceUid=<gen:2>, path=pl.woonkievitch.domain.Meal.orderList.<elements>)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=pl.woonkievitch.domain.Meal)
+          - SQL table alias mapping - meal0_
+          - alias suffix - 0_
+          - suffixed key columns - {id1_1_0_}
+
+2018-02-03 21:44:48 DEBUG EntityLoader:115 - Static select for entity pl.woonkievitch.domain.Meal [NONE]: select meal0_.id as id1_1_0_, meal0_.imgUrl as imgUrl2_1_0_, meal0_.kcal as kcal3_1_0_, meal0_.name as name4_1_0_, meal0_.price as price5_1_0_ from Meal meal0_ where meal0_.id=?
+2018-02-03 21:44:48 DEBUG QuerySpacesImpl:174 - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@72be135f]
+2018-02-03 21:44:48 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : imgUrl
+2018-02-03 21:44:48 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : kcal
+2018-02-03 21:44:48 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : name
+2018-02-03 21:44:48 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : orderList
+2018-02-03 21:44:48 DEBUG QuerySpacesImpl:174 - Adding QuerySpace : uid = <gen:1> -> org.hibernate.loader.plan.build.internal.spaces.CollectionQuerySpaceImpl@4bd2f0dc]
+2018-02-03 21:44:48 DEBUG QuerySpacesImpl:174 - Adding QuerySpace : uid = <gen:2> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@2e647e59]
+2018-02-03 21:44:48 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : price
+2018-02-03 21:44:48 DEBUG FetchStyleLoadPlanBuildingAssociationVisitationStrategy:150 - Building LoadPlan...
+2018-02-03 21:44:48 DEBUG LoadQueryJoinAndFetchProcessor:101 - processing queryspace <gen:0>
+2018-02-03 21:44:48 DEBUG LoadPlanTreePrinter:55 - LoadPlan(entity=pl.woonkievitch.domain.Meal)
+    - Returns
+       - EntityReturnImpl(entity=pl.woonkievitch.domain.Meal, querySpaceUid=<gen:0>, path=pl.woonkievitch.domain.Meal)
+          - CollectionAttributeFetchImpl(collection=pl.woonkievitch.domain.Meal.orderList, querySpaceUid=<gen:1>, path=pl.woonkievitch.domain.Meal.orderList)
+             - (collection element) CollectionFetchableElementEntityGraph(entity=pl.woonkievitch.domain.Orders, querySpaceUid=<gen:2>, path=pl.woonkievitch.domain.Meal.orderList.<elements>)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=pl.woonkievitch.domain.Meal)
+          - SQL table alias mapping - meal0_
+          - alias suffix - 0_
+          - suffixed key columns - {id1_1_0_}
+
+2018-02-03 21:44:48 DEBUG EntityLoader:115 - Static select for entity pl.woonkievitch.domain.Meal [READ]: select meal0_.id as id1_1_0_, meal0_.imgUrl as imgUrl2_1_0_, meal0_.kcal as kcal3_1_0_, meal0_.name as name4_1_0_, meal0_.price as price5_1_0_ from Meal meal0_ where meal0_.id=?
+2018-02-03 21:44:48 DEBUG QuerySpacesImpl:174 - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@2c42b421]
+2018-02-03 21:44:48 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : imgUrl
+2018-02-03 21:44:48 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : kcal
+2018-02-03 21:44:48 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : name
+2018-02-03 21:44:48 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : orderList
+2018-02-03 21:44:48 DEBUG QuerySpacesImpl:174 - Adding QuerySpace : uid = <gen:1> -> org.hibernate.loader.plan.build.internal.spaces.CollectionQuerySpaceImpl@deb3b60]
+2018-02-03 21:44:48 DEBUG QuerySpacesImpl:174 - Adding QuerySpace : uid = <gen:2> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@701a32]
+2018-02-03 21:44:48 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : price
+2018-02-03 21:44:48 DEBUG FetchStyleLoadPlanBuildingAssociationVisitationStrategy:150 - Building LoadPlan...
+2018-02-03 21:44:48 DEBUG LoadQueryJoinAndFetchProcessor:101 - processing queryspace <gen:0>
+2018-02-03 21:44:48 DEBUG LoadPlanTreePrinter:55 - LoadPlan(entity=pl.woonkievitch.domain.Meal)
+    - Returns
+       - EntityReturnImpl(entity=pl.woonkievitch.domain.Meal, querySpaceUid=<gen:0>, path=pl.woonkievitch.domain.Meal)
+          - CollectionAttributeFetchImpl(collection=pl.woonkievitch.domain.Meal.orderList, querySpaceUid=<gen:1>, path=pl.woonkievitch.domain.Meal.orderList)
+             - (collection element) CollectionFetchableElementEntityGraph(entity=pl.woonkievitch.domain.Orders, querySpaceUid=<gen:2>, path=pl.woonkievitch.domain.Meal.orderList.<elements>)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=pl.woonkievitch.domain.Meal)
+          - SQL table alias mapping - meal0_
+          - alias suffix - 0_
+          - suffixed key columns - {id1_1_0_}
+
+2018-02-03 21:44:48 DEBUG EntityLoader:115 - Static select for entity pl.woonkievitch.domain.Meal [UPGRADE]: select meal0_.id as id1_1_0_, meal0_.imgUrl as imgUrl2_1_0_, meal0_.kcal as kcal3_1_0_, meal0_.name as name4_1_0_, meal0_.price as price5_1_0_ from Meal meal0_ where meal0_.id=? for update
+2018-02-03 21:44:48 DEBUG QuerySpacesImpl:174 - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@39aa45a1]
+2018-02-03 21:44:48 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : imgUrl
+2018-02-03 21:44:48 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : kcal
+2018-02-03 21:44:48 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : name
+2018-02-03 21:44:48 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : orderList
+2018-02-03 21:44:48 DEBUG QuerySpacesImpl:174 - Adding QuerySpace : uid = <gen:1> -> org.hibernate.loader.plan.build.internal.spaces.CollectionQuerySpaceImpl@27cbfddf]
+2018-02-03 21:44:48 DEBUG QuerySpacesImpl:174 - Adding QuerySpace : uid = <gen:2> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@27ead29e]
+2018-02-03 21:44:48 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : price
+2018-02-03 21:44:48 DEBUG FetchStyleLoadPlanBuildingAssociationVisitationStrategy:150 - Building LoadPlan...
+2018-02-03 21:44:48 DEBUG LoadQueryJoinAndFetchProcessor:101 - processing queryspace <gen:0>
+2018-02-03 21:44:48 DEBUG LoadPlanTreePrinter:55 - LoadPlan(entity=pl.woonkievitch.domain.Meal)
+    - Returns
+       - EntityReturnImpl(entity=pl.woonkievitch.domain.Meal, querySpaceUid=<gen:0>, path=pl.woonkievitch.domain.Meal)
+          - CollectionAttributeFetchImpl(collection=pl.woonkievitch.domain.Meal.orderList, querySpaceUid=<gen:1>, path=pl.woonkievitch.domain.Meal.orderList)
+             - (collection element) CollectionFetchableElementEntityGraph(entity=pl.woonkievitch.domain.Orders, querySpaceUid=<gen:2>, path=pl.woonkievitch.domain.Meal.orderList.<elements>)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=pl.woonkievitch.domain.Meal)
+          - SQL table alias mapping - meal0_
+          - alias suffix - 0_
+          - suffixed key columns - {id1_1_0_}
+
+2018-02-03 21:44:48 DEBUG EntityLoader:115 - Static select for entity pl.woonkievitch.domain.Meal [UPGRADE_NOWAIT]: select meal0_.id as id1_1_0_, meal0_.imgUrl as imgUrl2_1_0_, meal0_.kcal as kcal3_1_0_, meal0_.name as name4_1_0_, meal0_.price as price5_1_0_ from Meal meal0_ where meal0_.id=? for update
+2018-02-03 21:44:48 DEBUG QuerySpacesImpl:174 - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@4c060c8f]
+2018-02-03 21:44:48 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : imgUrl
+2018-02-03 21:44:48 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : kcal
+2018-02-03 21:44:48 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : name
+2018-02-03 21:44:48 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : orderList
+2018-02-03 21:44:48 DEBUG QuerySpacesImpl:174 - Adding QuerySpace : uid = <gen:1> -> org.hibernate.loader.plan.build.internal.spaces.CollectionQuerySpaceImpl@383f3558]
+2018-02-03 21:44:48 DEBUG QuerySpacesImpl:174 - Adding QuerySpace : uid = <gen:2> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@49b07ee3]
+2018-02-03 21:44:48 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : price
+2018-02-03 21:44:48 DEBUG FetchStyleLoadPlanBuildingAssociationVisitationStrategy:150 - Building LoadPlan...
+2018-02-03 21:44:48 DEBUG LoadQueryJoinAndFetchProcessor:101 - processing queryspace <gen:0>
+2018-02-03 21:44:48 DEBUG LoadPlanTreePrinter:55 - LoadPlan(entity=pl.woonkievitch.domain.Meal)
+    - Returns
+       - EntityReturnImpl(entity=pl.woonkievitch.domain.Meal, querySpaceUid=<gen:0>, path=pl.woonkievitch.domain.Meal)
+          - CollectionAttributeFetchImpl(collection=pl.woonkievitch.domain.Meal.orderList, querySpaceUid=<gen:1>, path=pl.woonkievitch.domain.Meal.orderList)
+             - (collection element) CollectionFetchableElementEntityGraph(entity=pl.woonkievitch.domain.Orders, querySpaceUid=<gen:2>, path=pl.woonkievitch.domain.Meal.orderList.<elements>)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=pl.woonkievitch.domain.Meal)
+          - SQL table alias mapping - meal0_
+          - alias suffix - 0_
+          - suffixed key columns - {id1_1_0_}
+
+2018-02-03 21:44:48 DEBUG EntityLoader:115 - Static select for entity pl.woonkievitch.domain.Meal [UPGRADE_SKIPLOCKED]: select meal0_.id as id1_1_0_, meal0_.imgUrl as imgUrl2_1_0_, meal0_.kcal as kcal3_1_0_, meal0_.name as name4_1_0_, meal0_.price as price5_1_0_ from Meal meal0_ where meal0_.id=? for update
+2018-02-03 21:44:48 DEBUG QuerySpacesImpl:174 - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@352e612e]
+2018-02-03 21:44:48 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : imgUrl
+2018-02-03 21:44:48 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : kcal
+2018-02-03 21:44:48 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : name
+2018-02-03 21:44:48 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : orderList
+2018-02-03 21:44:48 DEBUG QuerySpacesImpl:174 - Adding QuerySpace : uid = <gen:1> -> org.hibernate.loader.plan.build.internal.spaces.CollectionQuerySpaceImpl@2424686b]
+2018-02-03 21:44:48 DEBUG QuerySpacesImpl:174 - Adding QuerySpace : uid = <gen:2> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@6ea94d6a]
+2018-02-03 21:44:48 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : price
+2018-02-03 21:44:48 DEBUG FetchStyleLoadPlanBuildingAssociationVisitationStrategy:150 - Building LoadPlan...
+2018-02-03 21:44:48 DEBUG LoadQueryJoinAndFetchProcessor:101 - processing queryspace <gen:0>
+2018-02-03 21:44:48 DEBUG LoadPlanTreePrinter:55 - LoadPlan(entity=pl.woonkievitch.domain.Meal)
+    - Returns
+       - EntityReturnImpl(entity=pl.woonkievitch.domain.Meal, querySpaceUid=<gen:0>, path=pl.woonkievitch.domain.Meal)
+          - CollectionAttributeFetchImpl(collection=pl.woonkievitch.domain.Meal.orderList, querySpaceUid=<gen:1>, path=pl.woonkievitch.domain.Meal.orderList)
+             - (collection element) CollectionFetchableElementEntityGraph(entity=pl.woonkievitch.domain.Orders, querySpaceUid=<gen:2>, path=pl.woonkievitch.domain.Meal.orderList.<elements>)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=pl.woonkievitch.domain.Meal)
+          - SQL table alias mapping - meal0_
+          - alias suffix - 0_
+          - suffixed key columns - {id1_1_0_}
+
+2018-02-03 21:44:48 DEBUG EntityLoader:115 - Static select for entity pl.woonkievitch.domain.Meal [FORCE]: select meal0_.id as id1_1_0_, meal0_.imgUrl as imgUrl2_1_0_, meal0_.kcal as kcal3_1_0_, meal0_.name as name4_1_0_, meal0_.price as price5_1_0_ from Meal meal0_ where meal0_.id=? for update
+2018-02-03 21:44:48 DEBUG QuerySpacesImpl:174 - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@28486680]
+2018-02-03 21:44:48 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : imgUrl
+2018-02-03 21:44:48 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : kcal
+2018-02-03 21:44:48 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : name
+2018-02-03 21:44:48 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : orderList
+2018-02-03 21:44:48 DEBUG QuerySpacesImpl:174 - Adding QuerySpace : uid = <gen:1> -> org.hibernate.loader.plan.build.internal.spaces.CollectionQuerySpaceImpl@4a1e3ac1]
+2018-02-03 21:44:48 DEBUG QuerySpacesImpl:174 - Adding QuerySpace : uid = <gen:2> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@6e78fcf5]
+2018-02-03 21:44:48 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : price
+2018-02-03 21:44:48 DEBUG FetchStyleLoadPlanBuildingAssociationVisitationStrategy:150 - Building LoadPlan...
+2018-02-03 21:44:48 DEBUG LoadQueryJoinAndFetchProcessor:101 - processing queryspace <gen:0>
+2018-02-03 21:44:48 DEBUG LoadPlanTreePrinter:55 - LoadPlan(entity=pl.woonkievitch.domain.Meal)
+    - Returns
+       - EntityReturnImpl(entity=pl.woonkievitch.domain.Meal, querySpaceUid=<gen:0>, path=pl.woonkievitch.domain.Meal)
+          - CollectionAttributeFetchImpl(collection=pl.woonkievitch.domain.Meal.orderList, querySpaceUid=<gen:1>, path=pl.woonkievitch.domain.Meal.orderList)
+             - (collection element) CollectionFetchableElementEntityGraph(entity=pl.woonkievitch.domain.Orders, querySpaceUid=<gen:2>, path=pl.woonkievitch.domain.Meal.orderList.<elements>)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=pl.woonkievitch.domain.Meal)
+          - SQL table alias mapping - meal0_
+          - alias suffix - 0_
+          - suffixed key columns - {id1_1_0_}
+
+2018-02-03 21:44:48 DEBUG EntityLoader:115 - Static select for entity pl.woonkievitch.domain.Meal [PESSIMISTIC_READ]: select meal0_.id as id1_1_0_, meal0_.imgUrl as imgUrl2_1_0_, meal0_.kcal as kcal3_1_0_, meal0_.name as name4_1_0_, meal0_.price as price5_1_0_ from Meal meal0_ where meal0_.id=? lock in share mode
+2018-02-03 21:44:48 DEBUG QuerySpacesImpl:174 - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@56febdc]
+2018-02-03 21:44:48 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : imgUrl
+2018-02-03 21:44:48 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : kcal
+2018-02-03 21:44:48 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : name
+2018-02-03 21:44:48 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : orderList
+2018-02-03 21:44:48 DEBUG QuerySpacesImpl:174 - Adding QuerySpace : uid = <gen:1> -> org.hibernate.loader.plan.build.internal.spaces.CollectionQuerySpaceImpl@7d151a]
+2018-02-03 21:44:48 DEBUG QuerySpacesImpl:174 - Adding QuerySpace : uid = <gen:2> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@294bdeb4]
+2018-02-03 21:44:48 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : price
+2018-02-03 21:44:48 DEBUG FetchStyleLoadPlanBuildingAssociationVisitationStrategy:150 - Building LoadPlan...
+2018-02-03 21:44:48 DEBUG LoadQueryJoinAndFetchProcessor:101 - processing queryspace <gen:0>
+2018-02-03 21:44:48 DEBUG LoadPlanTreePrinter:55 - LoadPlan(entity=pl.woonkievitch.domain.Meal)
+    - Returns
+       - EntityReturnImpl(entity=pl.woonkievitch.domain.Meal, querySpaceUid=<gen:0>, path=pl.woonkievitch.domain.Meal)
+          - CollectionAttributeFetchImpl(collection=pl.woonkievitch.domain.Meal.orderList, querySpaceUid=<gen:1>, path=pl.woonkievitch.domain.Meal.orderList)
+             - (collection element) CollectionFetchableElementEntityGraph(entity=pl.woonkievitch.domain.Orders, querySpaceUid=<gen:2>, path=pl.woonkievitch.domain.Meal.orderList.<elements>)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=pl.woonkievitch.domain.Meal)
+          - SQL table alias mapping - meal0_
+          - alias suffix - 0_
+          - suffixed key columns - {id1_1_0_}
+
+2018-02-03 21:44:48 DEBUG EntityLoader:115 - Static select for entity pl.woonkievitch.domain.Meal [PESSIMISTIC_WRITE]: select meal0_.id as id1_1_0_, meal0_.imgUrl as imgUrl2_1_0_, meal0_.kcal as kcal3_1_0_, meal0_.name as name4_1_0_, meal0_.price as price5_1_0_ from Meal meal0_ where meal0_.id=? for update
+2018-02-03 21:44:48 DEBUG QuerySpacesImpl:174 - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@5300f14a]
+2018-02-03 21:44:48 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : imgUrl
+2018-02-03 21:44:48 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : kcal
+2018-02-03 21:44:48 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : name
+2018-02-03 21:44:48 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : orderList
+2018-02-03 21:44:48 DEBUG QuerySpacesImpl:174 - Adding QuerySpace : uid = <gen:1> -> org.hibernate.loader.plan.build.internal.spaces.CollectionQuerySpaceImpl@77bb0ab5]
+2018-02-03 21:44:48 DEBUG QuerySpacesImpl:174 - Adding QuerySpace : uid = <gen:2> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@f2c488]
+2018-02-03 21:44:48 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : price
+2018-02-03 21:44:48 DEBUG FetchStyleLoadPlanBuildingAssociationVisitationStrategy:150 - Building LoadPlan...
+2018-02-03 21:44:48 DEBUG LoadQueryJoinAndFetchProcessor:101 - processing queryspace <gen:0>
+2018-02-03 21:44:48 DEBUG LoadPlanTreePrinter:55 - LoadPlan(entity=pl.woonkievitch.domain.Meal)
+    - Returns
+       - EntityReturnImpl(entity=pl.woonkievitch.domain.Meal, querySpaceUid=<gen:0>, path=pl.woonkievitch.domain.Meal)
+          - CollectionAttributeFetchImpl(collection=pl.woonkievitch.domain.Meal.orderList, querySpaceUid=<gen:1>, path=pl.woonkievitch.domain.Meal.orderList)
+             - (collection element) CollectionFetchableElementEntityGraph(entity=pl.woonkievitch.domain.Orders, querySpaceUid=<gen:2>, path=pl.woonkievitch.domain.Meal.orderList.<elements>)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=pl.woonkievitch.domain.Meal)
+          - SQL table alias mapping - meal0_
+          - alias suffix - 0_
+          - suffixed key columns - {id1_1_0_}
+
+2018-02-03 21:44:48 DEBUG EntityLoader:115 - Static select for entity pl.woonkievitch.domain.Meal [PESSIMISTIC_FORCE_INCREMENT]: select meal0_.id as id1_1_0_, meal0_.imgUrl as imgUrl2_1_0_, meal0_.kcal as kcal3_1_0_, meal0_.name as name4_1_0_, meal0_.price as price5_1_0_ from Meal meal0_ where meal0_.id=? for update
+2018-02-03 21:44:48 DEBUG QuerySpacesImpl:174 - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@54acff7d]
+2018-02-03 21:44:48 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : imgUrl
+2018-02-03 21:44:48 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : kcal
+2018-02-03 21:44:48 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : name
+2018-02-03 21:44:48 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : orderList
+2018-02-03 21:44:48 DEBUG QuerySpacesImpl:174 - Adding QuerySpace : uid = <gen:1> -> org.hibernate.loader.plan.build.internal.spaces.CollectionQuerySpaceImpl@5488b5c5]
+2018-02-03 21:44:48 DEBUG QuerySpacesImpl:174 - Adding QuerySpace : uid = <gen:2> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@4248ed58]
+2018-02-03 21:44:48 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : price
+2018-02-03 21:44:48 DEBUG FetchStyleLoadPlanBuildingAssociationVisitationStrategy:150 - Building LoadPlan...
+2018-02-03 21:44:48 DEBUG LoadQueryJoinAndFetchProcessor:101 - processing queryspace <gen:0>
+2018-02-03 21:44:48 DEBUG LoadPlanTreePrinter:55 - LoadPlan(entity=pl.woonkievitch.domain.Meal)
+    - Returns
+       - EntityReturnImpl(entity=pl.woonkievitch.domain.Meal, querySpaceUid=<gen:0>, path=pl.woonkievitch.domain.Meal)
+          - CollectionAttributeFetchImpl(collection=pl.woonkievitch.domain.Meal.orderList, querySpaceUid=<gen:1>, path=pl.woonkievitch.domain.Meal.orderList)
+             - (collection element) CollectionFetchableElementEntityGraph(entity=pl.woonkievitch.domain.Orders, querySpaceUid=<gen:2>, path=pl.woonkievitch.domain.Meal.orderList.<elements>)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=pl.woonkievitch.domain.Meal)
+          - SQL table alias mapping - meal0_
+          - alias suffix - 0_
+          - suffixed key columns - {id1_1_0_}
+
+2018-02-03 21:44:48 DEBUG EntityLoader:115 - Static select for entity pl.woonkievitch.domain.Meal [OPTIMISTIC]: select meal0_.id as id1_1_0_, meal0_.imgUrl as imgUrl2_1_0_, meal0_.kcal as kcal3_1_0_, meal0_.name as name4_1_0_, meal0_.price as price5_1_0_ from Meal meal0_ where meal0_.id=?
+2018-02-03 21:44:48 DEBUG QuerySpacesImpl:174 - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@712ca57b]
+2018-02-03 21:44:48 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : imgUrl
+2018-02-03 21:44:48 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : kcal
+2018-02-03 21:44:48 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : name
+2018-02-03 21:44:48 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : orderList
+2018-02-03 21:44:48 DEBUG QuerySpacesImpl:174 - Adding QuerySpace : uid = <gen:1> -> org.hibernate.loader.plan.build.internal.spaces.CollectionQuerySpaceImpl@54534abf]
+2018-02-03 21:44:48 DEBUG QuerySpacesImpl:174 - Adding QuerySpace : uid = <gen:2> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@51745f40]
+2018-02-03 21:44:48 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : price
+2018-02-03 21:44:48 DEBUG FetchStyleLoadPlanBuildingAssociationVisitationStrategy:150 - Building LoadPlan...
+2018-02-03 21:44:48 DEBUG LoadQueryJoinAndFetchProcessor:101 - processing queryspace <gen:0>
+2018-02-03 21:44:48 DEBUG LoadPlanTreePrinter:55 - LoadPlan(entity=pl.woonkievitch.domain.Meal)
+    - Returns
+       - EntityReturnImpl(entity=pl.woonkievitch.domain.Meal, querySpaceUid=<gen:0>, path=pl.woonkievitch.domain.Meal)
+          - CollectionAttributeFetchImpl(collection=pl.woonkievitch.domain.Meal.orderList, querySpaceUid=<gen:1>, path=pl.woonkievitch.domain.Meal.orderList)
+             - (collection element) CollectionFetchableElementEntityGraph(entity=pl.woonkievitch.domain.Orders, querySpaceUid=<gen:2>, path=pl.woonkievitch.domain.Meal.orderList.<elements>)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=pl.woonkievitch.domain.Meal)
+          - SQL table alias mapping - meal0_
+          - alias suffix - 0_
+          - suffixed key columns - {id1_1_0_}
+
+2018-02-03 21:44:48 DEBUG EntityLoader:115 - Static select for entity pl.woonkievitch.domain.Meal [OPTIMISTIC_FORCE_INCREMENT]: select meal0_.id as id1_1_0_, meal0_.imgUrl as imgUrl2_1_0_, meal0_.kcal as kcal3_1_0_, meal0_.name as name4_1_0_, meal0_.price as price5_1_0_ from Meal meal0_ where meal0_.id=?
+2018-02-03 21:44:48 DEBUG Loader:38 - Static select for action ACTION_MERGE on entity pl.woonkievitch.domain.Meal: select meal0_.id as id1_1_0_, meal0_.imgUrl as imgUrl2_1_0_, meal0_.kcal as kcal3_1_0_, meal0_.name as name4_1_0_, meal0_.price as price5_1_0_ from Meal meal0_ where meal0_.id=?
+2018-02-03 21:44:48 DEBUG Loader:38 - Static select for action ACTION_REFRESH on entity pl.woonkievitch.domain.Meal: select meal0_.id as id1_1_0_, meal0_.imgUrl as imgUrl2_1_0_, meal0_.kcal as kcal3_1_0_, meal0_.name as name4_1_0_, meal0_.price as price5_1_0_ from Meal meal0_ where meal0_.id=?
+2018-02-03 21:44:48 DEBUG AbstractEntityPersister:3608 - Static SQL for entity: pl.woonkievitch.domain.Orders
+2018-02-03 21:44:48 DEBUG AbstractEntityPersister:3613 -  Version select: select id from Orders where id =?
+2018-02-03 21:44:48 DEBUG AbstractEntityPersister:3616 -  Snapshot select: select orders_.id, orders_.status as status2_2_, orders_.value as value3_2_ from Orders orders_ where orders_.id=?
+2018-02-03 21:44:48 DEBUG AbstractEntityPersister:394 -  Insert 0: insert into Orders (status, value, id) values (?, ?, ?)
+2018-02-03 21:44:48 DEBUG AbstractEntityPersister:394 -  Update 0: update Orders set status=?, value=? where id=?
+2018-02-03 21:44:48 DEBUG AbstractEntityPersister:394 -  Delete 0: delete from Orders where id=?
+2018-02-03 21:44:48 DEBUG QuerySpacesImpl:174 - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@45673f68]
+2018-02-03 21:44:48 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : meals
+2018-02-03 21:44:48 DEBUG QuerySpacesImpl:174 - Adding QuerySpace : uid = <gen:1> -> org.hibernate.loader.plan.build.internal.spaces.CollectionQuerySpaceImpl@69e308c6]
+2018-02-03 21:44:48 DEBUG QuerySpacesImpl:174 - Adding QuerySpace : uid = <gen:2> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@1a1ed4e5]
+2018-02-03 21:44:48 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : status
+2018-02-03 21:44:48 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : value
+2018-02-03 21:44:48 DEBUG FetchStyleLoadPlanBuildingAssociationVisitationStrategy:150 - Building LoadPlan...
+2018-02-03 21:44:48 DEBUG LoadQueryJoinAndFetchProcessor:101 - processing queryspace <gen:0>
+2018-02-03 21:44:48 DEBUG LoadPlanTreePrinter:55 - LoadPlan(entity=pl.woonkievitch.domain.Orders)
+    - Returns
+       - EntityReturnImpl(entity=pl.woonkievitch.domain.Orders, querySpaceUid=<gen:0>, path=pl.woonkievitch.domain.Orders)
+          - CollectionAttributeFetchImpl(collection=pl.woonkievitch.domain.Orders.meals, querySpaceUid=<gen:1>, path=pl.woonkievitch.domain.Orders.meals)
+             - (collection element) CollectionFetchableElementEntityGraph(entity=pl.woonkievitch.domain.Meal, querySpaceUid=<gen:2>, path=pl.woonkievitch.domain.Orders.meals.<elements>)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=pl.woonkievitch.domain.Orders)
+          - SQL table alias mapping - orders0_
+          - alias suffix - 0_
+          - suffixed key columns - {id1_2_0_}
+
+2018-02-03 21:44:48 DEBUG EntityLoader:115 - Static select for entity pl.woonkievitch.domain.Orders [NONE]: select orders0_.id as id1_2_0_, orders0_.status as status2_2_0_, orders0_.value as value3_2_0_ from Orders orders0_ where orders0_.id=?
+2018-02-03 21:44:48 DEBUG QuerySpacesImpl:174 - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@667e34b1]
+2018-02-03 21:44:48 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : meals
+2018-02-03 21:44:48 DEBUG QuerySpacesImpl:174 - Adding QuerySpace : uid = <gen:1> -> org.hibernate.loader.plan.build.internal.spaces.CollectionQuerySpaceImpl@6dba847b]
+2018-02-03 21:44:48 DEBUG QuerySpacesImpl:174 - Adding QuerySpace : uid = <gen:2> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@1efdcd5]
+2018-02-03 21:44:48 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : status
+2018-02-03 21:44:48 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : value
+2018-02-03 21:44:48 DEBUG FetchStyleLoadPlanBuildingAssociationVisitationStrategy:150 - Building LoadPlan...
+2018-02-03 21:44:48 DEBUG LoadQueryJoinAndFetchProcessor:101 - processing queryspace <gen:0>
+2018-02-03 21:44:48 DEBUG LoadPlanTreePrinter:55 - LoadPlan(entity=pl.woonkievitch.domain.Orders)
+    - Returns
+       - EntityReturnImpl(entity=pl.woonkievitch.domain.Orders, querySpaceUid=<gen:0>, path=pl.woonkievitch.domain.Orders)
+          - CollectionAttributeFetchImpl(collection=pl.woonkievitch.domain.Orders.meals, querySpaceUid=<gen:1>, path=pl.woonkievitch.domain.Orders.meals)
+             - (collection element) CollectionFetchableElementEntityGraph(entity=pl.woonkievitch.domain.Meal, querySpaceUid=<gen:2>, path=pl.woonkievitch.domain.Orders.meals.<elements>)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=pl.woonkievitch.domain.Orders)
+          - SQL table alias mapping - orders0_
+          - alias suffix - 0_
+          - suffixed key columns - {id1_2_0_}
+
+2018-02-03 21:44:48 DEBUG EntityLoader:115 - Static select for entity pl.woonkievitch.domain.Orders [READ]: select orders0_.id as id1_2_0_, orders0_.status as status2_2_0_, orders0_.value as value3_2_0_ from Orders orders0_ where orders0_.id=?
+2018-02-03 21:44:48 DEBUG QuerySpacesImpl:174 - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@1623bbe5]
+2018-02-03 21:44:48 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : meals
+2018-02-03 21:44:48 DEBUG QuerySpacesImpl:174 - Adding QuerySpace : uid = <gen:1> -> org.hibernate.loader.plan.build.internal.spaces.CollectionQuerySpaceImpl@4351171a]
+2018-02-03 21:44:48 DEBUG QuerySpacesImpl:174 - Adding QuerySpace : uid = <gen:2> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@3c2772d1]
+2018-02-03 21:44:48 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : status
+2018-02-03 21:44:48 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : value
+2018-02-03 21:44:48 DEBUG FetchStyleLoadPlanBuildingAssociationVisitationStrategy:150 - Building LoadPlan...
+2018-02-03 21:44:48 DEBUG LoadQueryJoinAndFetchProcessor:101 - processing queryspace <gen:0>
+2018-02-03 21:44:48 DEBUG LoadPlanTreePrinter:55 - LoadPlan(entity=pl.woonkievitch.domain.Orders)
+    - Returns
+       - EntityReturnImpl(entity=pl.woonkievitch.domain.Orders, querySpaceUid=<gen:0>, path=pl.woonkievitch.domain.Orders)
+          - CollectionAttributeFetchImpl(collection=pl.woonkievitch.domain.Orders.meals, querySpaceUid=<gen:1>, path=pl.woonkievitch.domain.Orders.meals)
+             - (collection element) CollectionFetchableElementEntityGraph(entity=pl.woonkievitch.domain.Meal, querySpaceUid=<gen:2>, path=pl.woonkievitch.domain.Orders.meals.<elements>)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=pl.woonkievitch.domain.Orders)
+          - SQL table alias mapping - orders0_
+          - alias suffix - 0_
+          - suffixed key columns - {id1_2_0_}
+
+2018-02-03 21:44:48 DEBUG EntityLoader:115 - Static select for entity pl.woonkievitch.domain.Orders [UPGRADE]: select orders0_.id as id1_2_0_, orders0_.status as status2_2_0_, orders0_.value as value3_2_0_ from Orders orders0_ where orders0_.id=? for update
+2018-02-03 21:44:48 DEBUG QuerySpacesImpl:174 - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@37d00a23]
+2018-02-03 21:44:48 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : meals
+2018-02-03 21:44:48 DEBUG QuerySpacesImpl:174 - Adding QuerySpace : uid = <gen:1> -> org.hibernate.loader.plan.build.internal.spaces.CollectionQuerySpaceImpl@89c65d5]
+2018-02-03 21:44:48 DEBUG QuerySpacesImpl:174 - Adding QuerySpace : uid = <gen:2> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@faa3fed]
+2018-02-03 21:44:48 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : status
+2018-02-03 21:44:48 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : value
+2018-02-03 21:44:48 DEBUG FetchStyleLoadPlanBuildingAssociationVisitationStrategy:150 - Building LoadPlan...
+2018-02-03 21:44:48 DEBUG LoadQueryJoinAndFetchProcessor:101 - processing queryspace <gen:0>
+2018-02-03 21:44:48 DEBUG LoadPlanTreePrinter:55 - LoadPlan(entity=pl.woonkievitch.domain.Orders)
+    - Returns
+       - EntityReturnImpl(entity=pl.woonkievitch.domain.Orders, querySpaceUid=<gen:0>, path=pl.woonkievitch.domain.Orders)
+          - CollectionAttributeFetchImpl(collection=pl.woonkievitch.domain.Orders.meals, querySpaceUid=<gen:1>, path=pl.woonkievitch.domain.Orders.meals)
+             - (collection element) CollectionFetchableElementEntityGraph(entity=pl.woonkievitch.domain.Meal, querySpaceUid=<gen:2>, path=pl.woonkievitch.domain.Orders.meals.<elements>)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=pl.woonkievitch.domain.Orders)
+          - SQL table alias mapping - orders0_
+          - alias suffix - 0_
+          - suffixed key columns - {id1_2_0_}
+
+2018-02-03 21:44:48 DEBUG EntityLoader:115 - Static select for entity pl.woonkievitch.domain.Orders [UPGRADE_NOWAIT]: select orders0_.id as id1_2_0_, orders0_.status as status2_2_0_, orders0_.value as value3_2_0_ from Orders orders0_ where orders0_.id=? for update
+2018-02-03 21:44:48 DEBUG QuerySpacesImpl:174 - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@381cad29]
+2018-02-03 21:44:48 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : meals
+2018-02-03 21:44:48 DEBUG QuerySpacesImpl:174 - Adding QuerySpace : uid = <gen:1> -> org.hibernate.loader.plan.build.internal.spaces.CollectionQuerySpaceImpl@62515a47]
+2018-02-03 21:44:48 DEBUG QuerySpacesImpl:174 - Adding QuerySpace : uid = <gen:2> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@3c5a54b7]
+2018-02-03 21:44:48 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : status
+2018-02-03 21:44:48 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : value
+2018-02-03 21:44:48 DEBUG FetchStyleLoadPlanBuildingAssociationVisitationStrategy:150 - Building LoadPlan...
+2018-02-03 21:44:48 DEBUG LoadQueryJoinAndFetchProcessor:101 - processing queryspace <gen:0>
+2018-02-03 21:44:48 DEBUG LoadPlanTreePrinter:55 - LoadPlan(entity=pl.woonkievitch.domain.Orders)
+    - Returns
+       - EntityReturnImpl(entity=pl.woonkievitch.domain.Orders, querySpaceUid=<gen:0>, path=pl.woonkievitch.domain.Orders)
+          - CollectionAttributeFetchImpl(collection=pl.woonkievitch.domain.Orders.meals, querySpaceUid=<gen:1>, path=pl.woonkievitch.domain.Orders.meals)
+             - (collection element) CollectionFetchableElementEntityGraph(entity=pl.woonkievitch.domain.Meal, querySpaceUid=<gen:2>, path=pl.woonkievitch.domain.Orders.meals.<elements>)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=pl.woonkievitch.domain.Orders)
+          - SQL table alias mapping - orders0_
+          - alias suffix - 0_
+          - suffixed key columns - {id1_2_0_}
+
+2018-02-03 21:44:48 DEBUG EntityLoader:115 - Static select for entity pl.woonkievitch.domain.Orders [UPGRADE_SKIPLOCKED]: select orders0_.id as id1_2_0_, orders0_.status as status2_2_0_, orders0_.value as value3_2_0_ from Orders orders0_ where orders0_.id=? for update
+2018-02-03 21:44:48 DEBUG QuerySpacesImpl:174 - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@61f2c3f0]
+2018-02-03 21:44:48 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : meals
+2018-02-03 21:44:48 DEBUG QuerySpacesImpl:174 - Adding QuerySpace : uid = <gen:1> -> org.hibernate.loader.plan.build.internal.spaces.CollectionQuerySpaceImpl@417ad4f3]
+2018-02-03 21:44:48 DEBUG QuerySpacesImpl:174 - Adding QuerySpace : uid = <gen:2> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@2f6bcf87]
+2018-02-03 21:44:48 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : status
+2018-02-03 21:44:48 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : value
+2018-02-03 21:44:48 DEBUG FetchStyleLoadPlanBuildingAssociationVisitationStrategy:150 - Building LoadPlan...
+2018-02-03 21:44:48 DEBUG LoadQueryJoinAndFetchProcessor:101 - processing queryspace <gen:0>
+2018-02-03 21:44:48 DEBUG LoadPlanTreePrinter:55 - LoadPlan(entity=pl.woonkievitch.domain.Orders)
+    - Returns
+       - EntityReturnImpl(entity=pl.woonkievitch.domain.Orders, querySpaceUid=<gen:0>, path=pl.woonkievitch.domain.Orders)
+          - CollectionAttributeFetchImpl(collection=pl.woonkievitch.domain.Orders.meals, querySpaceUid=<gen:1>, path=pl.woonkievitch.domain.Orders.meals)
+             - (collection element) CollectionFetchableElementEntityGraph(entity=pl.woonkievitch.domain.Meal, querySpaceUid=<gen:2>, path=pl.woonkievitch.domain.Orders.meals.<elements>)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=pl.woonkievitch.domain.Orders)
+          - SQL table alias mapping - orders0_
+          - alias suffix - 0_
+          - suffixed key columns - {id1_2_0_}
+
+2018-02-03 21:44:48 DEBUG EntityLoader:115 - Static select for entity pl.woonkievitch.domain.Orders [FORCE]: select orders0_.id as id1_2_0_, orders0_.status as status2_2_0_, orders0_.value as value3_2_0_ from Orders orders0_ where orders0_.id=? for update
+2018-02-03 21:44:48 DEBUG QuerySpacesImpl:174 - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@58f174d9]
+2018-02-03 21:44:48 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : meals
+2018-02-03 21:44:48 DEBUG QuerySpacesImpl:174 - Adding QuerySpace : uid = <gen:1> -> org.hibernate.loader.plan.build.internal.spaces.CollectionQuerySpaceImpl@6f8d7714]
+2018-02-03 21:44:48 DEBUG QuerySpacesImpl:174 - Adding QuerySpace : uid = <gen:2> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@1e6b9a95]
+2018-02-03 21:44:48 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : status
+2018-02-03 21:44:48 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : value
+2018-02-03 21:44:48 DEBUG FetchStyleLoadPlanBuildingAssociationVisitationStrategy:150 - Building LoadPlan...
+2018-02-03 21:44:48 DEBUG LoadQueryJoinAndFetchProcessor:101 - processing queryspace <gen:0>
+2018-02-03 21:44:48 DEBUG LoadPlanTreePrinter:55 - LoadPlan(entity=pl.woonkievitch.domain.Orders)
+    - Returns
+       - EntityReturnImpl(entity=pl.woonkievitch.domain.Orders, querySpaceUid=<gen:0>, path=pl.woonkievitch.domain.Orders)
+          - CollectionAttributeFetchImpl(collection=pl.woonkievitch.domain.Orders.meals, querySpaceUid=<gen:1>, path=pl.woonkievitch.domain.Orders.meals)
+             - (collection element) CollectionFetchableElementEntityGraph(entity=pl.woonkievitch.domain.Meal, querySpaceUid=<gen:2>, path=pl.woonkievitch.domain.Orders.meals.<elements>)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=pl.woonkievitch.domain.Orders)
+          - SQL table alias mapping - orders0_
+          - alias suffix - 0_
+          - suffixed key columns - {id1_2_0_}
+
+2018-02-03 21:44:48 DEBUG EntityLoader:115 - Static select for entity pl.woonkievitch.domain.Orders [PESSIMISTIC_READ]: select orders0_.id as id1_2_0_, orders0_.status as status2_2_0_, orders0_.value as value3_2_0_ from Orders orders0_ where orders0_.id=? lock in share mode
+2018-02-03 21:44:48 DEBUG QuerySpacesImpl:174 - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@4d6f623d]
+2018-02-03 21:44:48 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : meals
+2018-02-03 21:44:48 DEBUG QuerySpacesImpl:174 - Adding QuerySpace : uid = <gen:1> -> org.hibernate.loader.plan.build.internal.spaces.CollectionQuerySpaceImpl@e93f3d5]
+2018-02-03 21:44:48 DEBUG QuerySpacesImpl:174 - Adding QuerySpace : uid = <gen:2> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@4cee7fa0]
+2018-02-03 21:44:48 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : status
+2018-02-03 21:44:48 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : value
+2018-02-03 21:44:48 DEBUG FetchStyleLoadPlanBuildingAssociationVisitationStrategy:150 - Building LoadPlan...
+2018-02-03 21:44:48 DEBUG LoadQueryJoinAndFetchProcessor:101 - processing queryspace <gen:0>
+2018-02-03 21:44:48 DEBUG LoadPlanTreePrinter:55 - LoadPlan(entity=pl.woonkievitch.domain.Orders)
+    - Returns
+       - EntityReturnImpl(entity=pl.woonkievitch.domain.Orders, querySpaceUid=<gen:0>, path=pl.woonkievitch.domain.Orders)
+          - CollectionAttributeFetchImpl(collection=pl.woonkievitch.domain.Orders.meals, querySpaceUid=<gen:1>, path=pl.woonkievitch.domain.Orders.meals)
+             - (collection element) CollectionFetchableElementEntityGraph(entity=pl.woonkievitch.domain.Meal, querySpaceUid=<gen:2>, path=pl.woonkievitch.domain.Orders.meals.<elements>)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=pl.woonkievitch.domain.Orders)
+          - SQL table alias mapping - orders0_
+          - alias suffix - 0_
+          - suffixed key columns - {id1_2_0_}
+
+2018-02-03 21:44:48 DEBUG EntityLoader:115 - Static select for entity pl.woonkievitch.domain.Orders [PESSIMISTIC_WRITE]: select orders0_.id as id1_2_0_, orders0_.status as status2_2_0_, orders0_.value as value3_2_0_ from Orders orders0_ where orders0_.id=? for update
+2018-02-03 21:44:48 DEBUG QuerySpacesImpl:174 - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@7a26928a]
+2018-02-03 21:44:48 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : meals
+2018-02-03 21:44:48 DEBUG QuerySpacesImpl:174 - Adding QuerySpace : uid = <gen:1> -> org.hibernate.loader.plan.build.internal.spaces.CollectionQuerySpaceImpl@7180e701]
+2018-02-03 21:44:48 DEBUG QuerySpacesImpl:174 - Adding QuerySpace : uid = <gen:2> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@4e2c95ee]
+2018-02-03 21:44:48 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : status
+2018-02-03 21:44:48 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : value
+2018-02-03 21:44:48 DEBUG FetchStyleLoadPlanBuildingAssociationVisitationStrategy:150 - Building LoadPlan...
+2018-02-03 21:44:48 DEBUG LoadQueryJoinAndFetchProcessor:101 - processing queryspace <gen:0>
+2018-02-03 21:44:48 DEBUG LoadPlanTreePrinter:55 - LoadPlan(entity=pl.woonkievitch.domain.Orders)
+    - Returns
+       - EntityReturnImpl(entity=pl.woonkievitch.domain.Orders, querySpaceUid=<gen:0>, path=pl.woonkievitch.domain.Orders)
+          - CollectionAttributeFetchImpl(collection=pl.woonkievitch.domain.Orders.meals, querySpaceUid=<gen:1>, path=pl.woonkievitch.domain.Orders.meals)
+             - (collection element) CollectionFetchableElementEntityGraph(entity=pl.woonkievitch.domain.Meal, querySpaceUid=<gen:2>, path=pl.woonkievitch.domain.Orders.meals.<elements>)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=pl.woonkievitch.domain.Orders)
+          - SQL table alias mapping - orders0_
+          - alias suffix - 0_
+          - suffixed key columns - {id1_2_0_}
+
+2018-02-03 21:44:48 DEBUG EntityLoader:115 - Static select for entity pl.woonkievitch.domain.Orders [PESSIMISTIC_FORCE_INCREMENT]: select orders0_.id as id1_2_0_, orders0_.status as status2_2_0_, orders0_.value as value3_2_0_ from Orders orders0_ where orders0_.id=? for update
+2018-02-03 21:44:48 DEBUG QuerySpacesImpl:174 - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@d0ec63]
+2018-02-03 21:44:48 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : meals
+2018-02-03 21:44:48 DEBUG QuerySpacesImpl:174 - Adding QuerySpace : uid = <gen:1> -> org.hibernate.loader.plan.build.internal.spaces.CollectionQuerySpaceImpl@73eb8672]
+2018-02-03 21:44:48 DEBUG QuerySpacesImpl:174 - Adding QuerySpace : uid = <gen:2> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@5942ee04]
+2018-02-03 21:44:48 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : status
+2018-02-03 21:44:48 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : value
+2018-02-03 21:44:48 DEBUG FetchStyleLoadPlanBuildingAssociationVisitationStrategy:150 - Building LoadPlan...
+2018-02-03 21:44:48 DEBUG LoadQueryJoinAndFetchProcessor:101 - processing queryspace <gen:0>
+2018-02-03 21:44:48 DEBUG LoadPlanTreePrinter:55 - LoadPlan(entity=pl.woonkievitch.domain.Orders)
+    - Returns
+       - EntityReturnImpl(entity=pl.woonkievitch.domain.Orders, querySpaceUid=<gen:0>, path=pl.woonkievitch.domain.Orders)
+          - CollectionAttributeFetchImpl(collection=pl.woonkievitch.domain.Orders.meals, querySpaceUid=<gen:1>, path=pl.woonkievitch.domain.Orders.meals)
+             - (collection element) CollectionFetchableElementEntityGraph(entity=pl.woonkievitch.domain.Meal, querySpaceUid=<gen:2>, path=pl.woonkievitch.domain.Orders.meals.<elements>)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=pl.woonkievitch.domain.Orders)
+          - SQL table alias mapping - orders0_
+          - alias suffix - 0_
+          - suffixed key columns - {id1_2_0_}
+
+2018-02-03 21:44:48 DEBUG EntityLoader:115 - Static select for entity pl.woonkievitch.domain.Orders [OPTIMISTIC]: select orders0_.id as id1_2_0_, orders0_.status as status2_2_0_, orders0_.value as value3_2_0_ from Orders orders0_ where orders0_.id=?
+2018-02-03 21:44:48 DEBUG QuerySpacesImpl:174 - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@5e76a2bb]
+2018-02-03 21:44:48 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : meals
+2018-02-03 21:44:48 DEBUG QuerySpacesImpl:174 - Adding QuerySpace : uid = <gen:1> -> org.hibernate.loader.plan.build.internal.spaces.CollectionQuerySpaceImpl@5a865416]
+2018-02-03 21:44:48 DEBUG QuerySpacesImpl:174 - Adding QuerySpace : uid = <gen:2> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@14faa38c]
+2018-02-03 21:44:48 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : status
+2018-02-03 21:44:48 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : value
+2018-02-03 21:44:48 DEBUG FetchStyleLoadPlanBuildingAssociationVisitationStrategy:150 - Building LoadPlan...
+2018-02-03 21:44:48 DEBUG LoadQueryJoinAndFetchProcessor:101 - processing queryspace <gen:0>
+2018-02-03 21:44:48 DEBUG LoadPlanTreePrinter:55 - LoadPlan(entity=pl.woonkievitch.domain.Orders)
+    - Returns
+       - EntityReturnImpl(entity=pl.woonkievitch.domain.Orders, querySpaceUid=<gen:0>, path=pl.woonkievitch.domain.Orders)
+          - CollectionAttributeFetchImpl(collection=pl.woonkievitch.domain.Orders.meals, querySpaceUid=<gen:1>, path=pl.woonkievitch.domain.Orders.meals)
+             - (collection element) CollectionFetchableElementEntityGraph(entity=pl.woonkievitch.domain.Meal, querySpaceUid=<gen:2>, path=pl.woonkievitch.domain.Orders.meals.<elements>)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=pl.woonkievitch.domain.Orders)
+          - SQL table alias mapping - orders0_
+          - alias suffix - 0_
+          - suffixed key columns - {id1_2_0_}
+
+2018-02-03 21:44:48 DEBUG EntityLoader:115 - Static select for entity pl.woonkievitch.domain.Orders [OPTIMISTIC_FORCE_INCREMENT]: select orders0_.id as id1_2_0_, orders0_.status as status2_2_0_, orders0_.value as value3_2_0_ from Orders orders0_ where orders0_.id=?
+2018-02-03 21:44:48 DEBUG Loader:38 - Static select for action ACTION_MERGE on entity pl.woonkievitch.domain.Orders: select orders0_.id as id1_2_0_, orders0_.status as status2_2_0_, orders0_.value as value3_2_0_ from Orders orders0_ where orders0_.id=?
+2018-02-03 21:44:48 DEBUG Loader:38 - Static select for action ACTION_REFRESH on entity pl.woonkievitch.domain.Orders: select orders0_.id as id1_2_0_, orders0_.status as status2_2_0_, orders0_.value as value3_2_0_ from Orders orders0_ where orders0_.id=?
+2018-02-03 21:44:48 DEBUG QuerySpacesImpl:174 - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.CollectionQuerySpaceImpl@7ff2b8d2]
+2018-02-03 21:44:48 DEBUG QuerySpacesImpl:174 - Adding QuerySpace : uid = <gen:1> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@6dc1484]
+2018-02-03 21:44:48 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : meals
+2018-02-03 21:44:48 DEBUG MetamodelGraphWalker:145 - Property path deemed to be circular : meals
+2018-02-03 21:44:48 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : status
+2018-02-03 21:44:48 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : value
+2018-02-03 21:44:48 DEBUG FetchStyleLoadPlanBuildingAssociationVisitationStrategy:150 - Building LoadPlan...
+2018-02-03 21:44:48 DEBUG LoadQueryJoinAndFetchProcessor:101 - processing queryspace <gen:0>
+2018-02-03 21:44:48 DEBUG LoadPlanTreePrinter:55 - LoadPlan(collection=pl.woonkievitch.domain.Meal.orderList)
+    - Returns
+       - CollectionReturnImpl(collection=pl.woonkievitch.domain.Meal.orderList, querySpaceUid=<gen:0>, path=[pl.woonkievitch.domain.Meal.orderList])
+          - (collection element) CollectionFetchableElementEntityGraph(entity=pl.woonkievitch.domain.Orders, querySpaceUid=<gen:1>, path=[pl.woonkievitch.domain.Meal.orderList].<elements>)
+    - QuerySpaces
+       - CollectionQuerySpaceImpl(uid=<gen:0>, collection=pl.woonkievitch.domain.Meal.orderList)
+          - SQL table alias mapping - orderlist0_
+          - alias suffix - 0_
+          - suffixed key columns - {meals_id2_3_0_}
+          - entity-element alias suffix - 1_
+          - 1_entity-element suffixed key columns - id1_2_1_
+          - JOIN (JoinDefinedByMetadata(elements)) : <gen:0> -> <gen:1>
+             - EntityQuerySpaceImpl(uid=<gen:1>, entity=pl.woonkievitch.domain.Orders)
+                - SQL table alias mapping - orders1_
+                - alias suffix - 1_
+                - suffixed key columns - {id1_2_1_}
+
+2018-02-03 21:44:48 DEBUG CollectionLoader:83 - Static select for collection pl.woonkievitch.domain.Meal.orderList: select orderlist0_.meals_id as meals_id2_3_0_, orderlist0_.orderList_id as orderLis1_3_0_, orders1_.id as id1_2_1_, orders1_.status as status2_2_1_, orders1_.value as value3_2_1_ from Orders_Meal orderlist0_ inner join Orders orders1_ on orderlist0_.orderList_id=orders1_.id where orderlist0_.meals_id=?
+2018-02-03 21:44:48 DEBUG QuerySpacesImpl:174 - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.CollectionQuerySpaceImpl@456be73c]
+2018-02-03 21:44:48 DEBUG QuerySpacesImpl:174 - Adding QuerySpace : uid = <gen:1> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@2375b321]
+2018-02-03 21:44:48 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : imgUrl
+2018-02-03 21:44:48 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : kcal
+2018-02-03 21:44:48 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : name
+2018-02-03 21:44:48 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : orderList
+2018-02-03 21:44:48 DEBUG QuerySpacesImpl:174 - Adding QuerySpace : uid = <gen:2> -> org.hibernate.loader.plan.build.internal.spaces.CollectionQuerySpaceImpl@41a6d121]
+2018-02-03 21:44:48 DEBUG QuerySpacesImpl:174 - Adding QuerySpace : uid = <gen:3> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@4f449e8f]
+2018-02-03 21:44:48 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : price
+2018-02-03 21:44:48 DEBUG FetchStyleLoadPlanBuildingAssociationVisitationStrategy:150 - Building LoadPlan...
+2018-02-03 21:44:48 DEBUG LoadQueryJoinAndFetchProcessor:101 - processing queryspace <gen:0>
+2018-02-03 21:44:48 DEBUG LoadPlanTreePrinter:55 - LoadPlan(collection=pl.woonkievitch.domain.Category.meals)
+    - Returns
+       - CollectionReturnImpl(collection=pl.woonkievitch.domain.Category.meals, querySpaceUid=<gen:0>, path=[pl.woonkievitch.domain.Category.meals])
+          - (collection element) CollectionFetchableElementEntityGraph(entity=pl.woonkievitch.domain.Meal, querySpaceUid=<gen:1>, path=[pl.woonkievitch.domain.Category.meals].<elements>)
+             - CollectionAttributeFetchImpl(collection=pl.woonkievitch.domain.Meal.orderList, querySpaceUid=<gen:2>, path=[pl.woonkievitch.domain.Category.meals].<elements>.orderList)
+                - (collection element) CollectionFetchableElementEntityGraph(entity=pl.woonkievitch.domain.Orders, querySpaceUid=<gen:3>, path=[pl.woonkievitch.domain.Category.meals].<elements>.orderList.<elements>)
+    - QuerySpaces
+       - CollectionQuerySpaceImpl(uid=<gen:0>, collection=pl.woonkievitch.domain.Category.meals)
+          - SQL table alias mapping - meals0_
+          - alias suffix - 0_
+          - suffixed key columns - {Category6_1_0_}
+          - entity-element alias suffix - 1_
+          - 1_entity-element suffixed key columns - id1_1_1_
+          - JOIN (JoinDefinedByMetadata(elements)) : <gen:0> -> <gen:1>
+             - EntityQuerySpaceImpl(uid=<gen:1>, entity=pl.woonkievitch.domain.Meal)
+                - SQL table alias mapping - meals0_
+                - alias suffix - 1_
+                - suffixed key columns - {id1_1_1_}
+
+2018-02-03 21:44:48 DEBUG CollectionLoader:83 - Static select for collection pl.woonkievitch.domain.Category.meals: select meals0_.CategoryId as Category6_1_0_, meals0_.id as id1_1_0_, meals0_.id as id1_1_1_, meals0_.imgUrl as imgUrl2_1_1_, meals0_.kcal as kcal3_1_1_, meals0_.name as name4_1_1_, meals0_.price as price5_1_1_ from Meal meals0_ where meals0_.CategoryId=?
+2018-02-03 21:44:48 DEBUG QuerySpacesImpl:174 - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.CollectionQuerySpaceImpl@411291e5]
+2018-02-03 21:44:48 DEBUG QuerySpacesImpl:174 - Adding QuerySpace : uid = <gen:1> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@6e28bb87]
+2018-02-03 21:44:48 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : imgUrl
+2018-02-03 21:44:48 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : kcal
+2018-02-03 21:44:48 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : name
+2018-02-03 21:44:48 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : orderList
+2018-02-03 21:44:48 DEBUG MetamodelGraphWalker:145 - Property path deemed to be circular : orderList
+2018-02-03 21:44:48 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : price
+2018-02-03 21:44:48 DEBUG FetchStyleLoadPlanBuildingAssociationVisitationStrategy:150 - Building LoadPlan...
+2018-02-03 21:44:48 DEBUG LoadQueryJoinAndFetchProcessor:101 - processing queryspace <gen:0>
+2018-02-03 21:44:48 DEBUG LoadPlanTreePrinter:55 - LoadPlan(collection=pl.woonkievitch.domain.Orders.meals)
+    - Returns
+       - CollectionReturnImpl(collection=pl.woonkievitch.domain.Orders.meals, querySpaceUid=<gen:0>, path=[pl.woonkievitch.domain.Orders.meals])
+          - (collection element) CollectionFetchableElementEntityGraph(entity=pl.woonkievitch.domain.Meal, querySpaceUid=<gen:1>, path=[pl.woonkievitch.domain.Orders.meals].<elements>)
+    - QuerySpaces
+       - CollectionQuerySpaceImpl(uid=<gen:0>, collection=pl.woonkievitch.domain.Orders.meals)
+          - SQL table alias mapping - meals0_
+          - alias suffix - 0_
+          - suffixed key columns - {orderLis1_3_0_}
+          - entity-element alias suffix - 1_
+          - 1_entity-element suffixed key columns - id1_1_1_
+          - JOIN (JoinDefinedByMetadata(elements)) : <gen:0> -> <gen:1>
+             - EntityQuerySpaceImpl(uid=<gen:1>, entity=pl.woonkievitch.domain.Meal)
+                - SQL table alias mapping - meal1_
+                - alias suffix - 1_
+                - suffixed key columns - {id1_1_1_}
+
+2018-02-03 21:44:48 DEBUG CollectionLoader:83 - Static select for collection pl.woonkievitch.domain.Orders.meals: select meals0_.orderList_id as orderLis1_3_0_, meals0_.meals_id as meals_id2_3_0_, meal1_.id as id1_1_1_, meal1_.imgUrl as imgUrl2_1_1_, meal1_.kcal as kcal3_1_1_, meal1_.name as name4_1_1_, meal1_.price as price5_1_1_ from Orders_Meal meals0_ inner join Meal meal1_ on meals0_.meals_id=meal1_.id where meals0_.orderList_id=?
+2018-02-03 21:44:48 INFO  access:47 - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@3d7cc3cb] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2018-02-03 21:44:48 DEBUG Table:513 - No alter strings for table : Category
+2018-02-03 21:44:48 DEBUG Table:513 - No alter strings for table : hibernate_sequence
+2018-02-03 21:44:48 DEBUG Table:513 - No alter strings for table : Meal
+2018-02-03 21:44:48 DEBUG Table:513 - No alter strings for table : Orders
+2018-02-03 21:44:48 DEBUG Table:513 - No alter strings for table : Orders_Meal
+2018-02-03 21:44:48 DEBUG SQL:92 - alter table Meal add constraint FKg0tpkhnehpbqduqmhu11q5sbu foreign key (CategoryId) references Category (id)
+2018-02-03 21:44:48 DEBUG SQL:92 - alter table Orders_Meal add constraint FKdfprt8o835gt729rqe35rvlth foreign key (meals_id) references Meal (id)
+2018-02-03 21:44:48 DEBUG SQL:92 - alter table Orders_Meal add constraint FKtiqoin5glksdcda34hiu819rb foreign key (orderList_id) references Orders (id)
+2018-02-03 21:44:48 DEBUG JtaPlatformInitiator:42 - No JtaPlatform was specified, checking resolver
+2018-02-03 21:44:48 DEBUG JtaPlatformResolverInitiator:33 - No JtaPlatformResolver was specified, using default [org.hibernate.engine.transaction.jta.platform.internal.StandardJtaPlatformResolver]
+2018-02-03 21:44:48 DEBUG StandardJtaPlatformResolver:102 - Could not resolve JtaPlatform, using default [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2018-02-03 21:44:48 DEBUG NamedQueryRepository:151 - Checking 0 named HQL queries
+2018-02-03 21:44:48 DEBUG NamedQueryRepository:167 - Checking 0 named SQL queries
+2018-02-03 21:44:48 DEBUG SessionFactoryRegistry:74 - Registering SessionFactory: d6aa22ed-b35d-4195-81a6-5d2f32df2956 (<unnamed>)
+2018-02-03 21:44:48 DEBUG SessionFactoryRegistry:81 - Not binding SessionFactory to JNDI, no JNDI name configured
+2018-02-03 21:44:48 DEBUG StatisticsInitiator:82 - Statistics initialized [enabled=false]
+2018-02-03 21:44:48 DEBUG QueryTranslatorFactoryInitiator:45 - QueryTranslatorFactory : org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory@1133ec6e
+2018-02-03 21:44:48 INFO  QueryTranslatorFactoryInitiator:47 - HHH000397: Using ASTQueryTranslatorFactory
+2018-02-03 21:44:48 DEBUG QueryTranslatorImpl:282 - parse() - HQL: select m from pl.woonkievitch.domain.Meal m
+2018-02-03 21:44:48 DEBUG ErrorCounter:95 - throwQueryException() : no errors
+2018-02-03 21:44:48 DEBUG QueryTranslatorImpl:305 - --- HQL AST ---
+ \-[QUERY] Node: 'query'
+    \-[SELECT_FROM] Node: 'SELECT_FROM'
+       +-[FROM] Node: 'from'
+       |  \-[RANGE] Node: 'RANGE'
+       |     +-[DOT] Node: '.'
+       |     |  +-[DOT] Node: '.'
+       |     |  |  +-[DOT] Node: '.'
+       |     |  |  |  +-[IDENT] Node: 'pl'
+       |     |  |  |  \-[IDENT] Node: 'woonkievitch'
+       |     |  |  \-[IDENT] Node: 'domain'
+       |     |  \-[IDENT] Node: 'Meal'
+       |     \-[ALIAS] Node: 'm'
+       \-[SELECT] Node: 'select'
+          \-[IDENT] Node: 'm'
+
+2018-02-03 21:44:48 DEBUG HqlSqlBaseWalker:124 - select << begin [level=1, statement=select]
+2018-02-03 21:44:48 DEBUG FromElement:147 - FromClause{level=1} : pl.woonkievitch.domain.Meal (m) -> meal0_
+2018-02-03 21:44:48 DEBUG FromReferenceNode:60 - Resolved : m -> meal0_.id
+2018-02-03 21:44:48 DEBUG HqlSqlBaseWalker:128 - select : finishing up [level=1, statement=select]
+2018-02-03 21:44:48 DEBUG HqlSqlWalker:745 - processQuery() :  ( SELECT ( {select clause} meal0_.id ) ( FromClause{level=1} Meal meal0_ ) )
+2018-02-03 21:44:48 DEBUG JoinProcessor:187 - Using FROM fragment [Meal meal0_]
+2018-02-03 21:44:48 DEBUG HqlSqlBaseWalker:132 - select >> end [level=1, statement=select]
+2018-02-03 21:44:48 DEBUG QueryTranslatorImpl:269 - --- SQL AST ---
+ \-[SELECT] QueryNode: 'SELECT'  querySpaces (Meal)
+    +-[SELECT_CLAUSE] SelectClause: '{select clause}'
+    |  +-[ALIAS_REF] IdentNode: 'meal0_.id as id1_1_' {alias=m, className=pl.woonkievitch.domain.Meal, tableAlias=meal0_}
+    |  \-[SQL_TOKEN] SqlFragment: 'meal0_.imgUrl as imgUrl2_1_, meal0_.kcal as kcal3_1_, meal0_.name as name4_1_, meal0_.price as price5_1_'
+    \-[FROM] FromClause: 'from' FromClause{level=1, fromElementCounter=1, fromElements=1, fromElementByClassAlias=[m], fromElementByTableAlias=[meal0_], fromElementsByPath=[], collectionJoinFromElementsByPath=[], impliedElements=[]}
+       \-[FROM_FRAGMENT] FromElement: 'Meal meal0_' FromElement{explicit,not a collection join,not a fetch join,fetch non-lazy properties,classAlias=m,role=null,tableName=Meal,tableAlias=meal0_,origin=null,columns={,className=pl.woonkievitch.domain.Meal}}
+
+2018-02-03 21:44:48 DEBUG ErrorCounter:95 - throwQueryException() : no errors
+2018-02-03 21:44:48 DEBUG QueryTranslatorImpl:251 - HQL: select m from pl.woonkievitch.domain.Meal m
+2018-02-03 21:44:48 DEBUG QueryTranslatorImpl:252 - SQL: select meal0_.id as id1_1_, meal0_.imgUrl as imgUrl2_1_, meal0_.kcal as kcal3_1_, meal0_.name as name4_1_, meal0_.price as price5_1_ from Meal meal0_
+2018-02-03 21:44:48 DEBUG ErrorCounter:95 - throwQueryException() : no errors
+2018-02-03 21:44:48 DEBUG SQL:92 - select meal0_.id as id1_1_, meal0_.imgUrl as imgUrl2_1_, meal0_.kcal as kcal3_1_, meal0_.name as name4_1_, meal0_.price as price5_1_ from Meal meal0_
+2018-02-03 21:44:48 DEBUG Loader:384 - Result set row: 0
+2018-02-03 21:44:48 DEBUG Loader:1543 - Result row: EntityKey[pl.woonkievitch.domain.Meal#1]
+2018-02-03 21:44:48 DEBUG Loader:384 - Result set row: 1
+2018-02-03 21:44:48 DEBUG Loader:1543 - Result row: EntityKey[pl.woonkievitch.domain.Meal#2]
+2018-02-03 21:44:48 DEBUG Loader:384 - Result set row: 2
+2018-02-03 21:44:48 DEBUG Loader:1543 - Result row: EntityKey[pl.woonkievitch.domain.Meal#3]
+2018-02-03 21:44:48 DEBUG Loader:384 - Result set row: 3
+2018-02-03 21:44:48 DEBUG Loader:1543 - Result row: EntityKey[pl.woonkievitch.domain.Meal#4]
+2018-02-03 21:44:48 DEBUG Loader:384 - Result set row: 4
+2018-02-03 21:44:48 DEBUG Loader:1543 - Result row: EntityKey[pl.woonkievitch.domain.Meal#5]
+2018-02-03 21:44:48 DEBUG Loader:384 - Result set row: 5
+2018-02-03 21:44:48 DEBUG Loader:1543 - Result row: EntityKey[pl.woonkievitch.domain.Meal#6]
+2018-02-03 21:44:48 DEBUG Loader:384 - Result set row: 6
+2018-02-03 21:44:48 DEBUG Loader:1543 - Result row: EntityKey[pl.woonkievitch.domain.Meal#7]
+2018-02-03 21:44:48 DEBUG Loader:384 - Result set row: 7
+2018-02-03 21:44:48 DEBUG Loader:1543 - Result row: EntityKey[pl.woonkievitch.domain.Meal#8]
+2018-02-03 21:44:48 DEBUG Loader:384 - Result set row: 8
+2018-02-03 21:44:48 DEBUG Loader:1543 - Result row: EntityKey[pl.woonkievitch.domain.Meal#10]
+2018-02-03 21:44:48 DEBUG Loader:384 - Result set row: 9
+2018-02-03 21:44:48 DEBUG Loader:1543 - Result row: EntityKey[pl.woonkievitch.domain.Meal#11]
+2018-02-03 21:44:48 DEBUG Loader:384 - Result set row: 10
+2018-02-03 21:44:48 DEBUG Loader:1543 - Result row: EntityKey[pl.woonkievitch.domain.Meal#12]
+2018-02-03 21:44:48 DEBUG Loader:384 - Result set row: 11
+2018-02-03 21:44:48 DEBUG Loader:1543 - Result row: EntityKey[pl.woonkievitch.domain.Meal#13]
+2018-02-03 21:44:48 DEBUG Loader:384 - Result set row: 12
+2018-02-03 21:44:48 DEBUG Loader:1543 - Result row: EntityKey[pl.woonkievitch.domain.Meal#14]
+2018-02-03 21:44:48 DEBUG Loader:384 - Result set row: 13
+2018-02-03 21:44:48 DEBUG Loader:1543 - Result row: EntityKey[pl.woonkievitch.domain.Meal#15]
+2018-02-03 21:44:48 DEBUG TwoPhaseLoad:141 - Resolving associations for [pl.woonkievitch.domain.Meal#1]
+2018-02-03 21:44:48 DEBUG TwoPhaseLoad:281 - Done materializing entity [pl.woonkievitch.domain.Meal#1]
+2018-02-03 21:44:48 DEBUG TwoPhaseLoad:141 - Resolving associations for [pl.woonkievitch.domain.Meal#2]
+2018-02-03 21:44:48 DEBUG TwoPhaseLoad:281 - Done materializing entity [pl.woonkievitch.domain.Meal#2]
+2018-02-03 21:44:48 DEBUG TwoPhaseLoad:141 - Resolving associations for [pl.woonkievitch.domain.Meal#3]
+2018-02-03 21:44:48 DEBUG TwoPhaseLoad:281 - Done materializing entity [pl.woonkievitch.domain.Meal#3]
+2018-02-03 21:44:48 DEBUG TwoPhaseLoad:141 - Resolving associations for [pl.woonkievitch.domain.Meal#4]
+2018-02-03 21:44:48 DEBUG TwoPhaseLoad:281 - Done materializing entity [pl.woonkievitch.domain.Meal#4]
+2018-02-03 21:44:48 DEBUG TwoPhaseLoad:141 - Resolving associations for [pl.woonkievitch.domain.Meal#5]
+2018-02-03 21:44:48 DEBUG TwoPhaseLoad:281 - Done materializing entity [pl.woonkievitch.domain.Meal#5]
+2018-02-03 21:44:48 DEBUG TwoPhaseLoad:141 - Resolving associations for [pl.woonkievitch.domain.Meal#6]
+2018-02-03 21:44:48 DEBUG TwoPhaseLoad:281 - Done materializing entity [pl.woonkievitch.domain.Meal#6]
+2018-02-03 21:44:48 DEBUG TwoPhaseLoad:141 - Resolving associations for [pl.woonkievitch.domain.Meal#7]
+2018-02-03 21:44:48 DEBUG TwoPhaseLoad:281 - Done materializing entity [pl.woonkievitch.domain.Meal#7]
+2018-02-03 21:44:48 DEBUG TwoPhaseLoad:141 - Resolving associations for [pl.woonkievitch.domain.Meal#8]
+2018-02-03 21:44:48 DEBUG TwoPhaseLoad:281 - Done materializing entity [pl.woonkievitch.domain.Meal#8]
+2018-02-03 21:44:48 DEBUG TwoPhaseLoad:141 - Resolving associations for [pl.woonkievitch.domain.Meal#10]
+2018-02-03 21:44:48 DEBUG TwoPhaseLoad:281 - Done materializing entity [pl.woonkievitch.domain.Meal#10]
+2018-02-03 21:44:48 DEBUG TwoPhaseLoad:141 - Resolving associations for [pl.woonkievitch.domain.Meal#11]
+2018-02-03 21:44:48 DEBUG TwoPhaseLoad:281 - Done materializing entity [pl.woonkievitch.domain.Meal#11]
+2018-02-03 21:44:48 DEBUG TwoPhaseLoad:141 - Resolving associations for [pl.woonkievitch.domain.Meal#12]
+2018-02-03 21:44:48 DEBUG TwoPhaseLoad:281 - Done materializing entity [pl.woonkievitch.domain.Meal#12]
+2018-02-03 21:44:48 DEBUG TwoPhaseLoad:141 - Resolving associations for [pl.woonkievitch.domain.Meal#13]
+2018-02-03 21:44:48 DEBUG TwoPhaseLoad:281 - Done materializing entity [pl.woonkievitch.domain.Meal#13]
+2018-02-03 21:44:48 DEBUG TwoPhaseLoad:141 - Resolving associations for [pl.woonkievitch.domain.Meal#14]
+2018-02-03 21:44:48 DEBUG TwoPhaseLoad:281 - Done materializing entity [pl.woonkievitch.domain.Meal#14]
+2018-02-03 21:44:48 DEBUG TwoPhaseLoad:141 - Resolving associations for [pl.woonkievitch.domain.Meal#15]
+2018-02-03 21:44:48 DEBUG TwoPhaseLoad:281 - Done materializing entity [pl.woonkievitch.domain.Meal#15]
+2018-02-03 21:44:48 DEBUG LogicalConnectionManagedImpl:170 - Initiating JDBC connection release from afterTransaction
+2018-02-03 21:44:48 DEBUG QueryTranslatorImpl:282 - parse() - HQL: select o from pl.woonkievitch.domain.Orders o join  o.meals meal where meal in :meals
+2018-02-03 21:44:48 DEBUG ErrorCounter:95 - throwQueryException() : no errors
+2018-02-03 21:44:48 DEBUG QueryTranslatorImpl:305 - --- HQL AST ---
+ \-[QUERY] Node: 'query'
+    +-[SELECT_FROM] Node: 'SELECT_FROM'
+    |  +-[FROM] Node: 'from'
+    |  |  +-[RANGE] Node: 'RANGE'
+    |  |  |  +-[DOT] Node: '.'
+    |  |  |  |  +-[DOT] Node: '.'
+    |  |  |  |  |  +-[DOT] Node: '.'
+    |  |  |  |  |  |  +-[IDENT] Node: 'pl'
+    |  |  |  |  |  |  \-[IDENT] Node: 'woonkievitch'
+    |  |  |  |  |  \-[IDENT] Node: 'domain'
+    |  |  |  |  \-[IDENT] Node: 'Orders'
+    |  |  |  \-[ALIAS] Node: 'o'
+    |  |  \-[JOIN] Node: 'join'
+    |  |     +-[DOT] Node: '.'
+    |  |     |  +-[IDENT] Node: 'o'
+    |  |     |  \-[IDENT] Node: 'meals'
+    |  |     \-[ALIAS] Node: 'meal'
+    |  \-[SELECT] Node: 'select'
+    |     \-[IDENT] Node: 'o'
+    \-[WHERE] Node: 'where'
+       \-[IN] Node: 'in'
+          +-[IDENT] Node: 'meal'
+          \-[IN_LIST] Node: 'inList'
+             \-[COLON] Node: ':'
+                \-[IDENT] Node: 'meals'
+
+2018-02-03 21:44:48 DEBUG HqlSqlBaseWalker:124 - select << begin [level=1, statement=select]
+2018-02-03 21:44:48 DEBUG FromElement:147 - FromClause{level=1} : pl.woonkievitch.domain.Orders (o) -> orders0_
+2018-02-03 21:44:48 DEBUG FromReferenceNode:60 - Resolved : o -> orders0_.id
+2018-02-03 21:44:48 DEBUG DotNode:666 - getDataType() : meals -> org.hibernate.type.BagType(pl.woonkievitch.domain.Orders.meals)
+2018-02-03 21:44:48 DEBUG FromElementFactory:404 - createManyToMany() : path = o.meals role = pl.woonkievitch.domain.Orders.meals associatedEntityName = pl.woonkievitch.domain.Meal
+2018-02-03 21:44:48 DEBUG FromElement:147 - FromClause{level=1} : pl.woonkievitch.domain.Meal (meal) -> meal2_
+2018-02-03 21:44:48 DEBUG FromClause:287 - addJoinByPathMap() : o.meals -> FromElement{explicit,not a collection join,not a fetch join,fetch non-lazy properties,classAlias=meal,role=null,tableName=Meal,tableAlias=meal2_,origin=Orders orders0_,columns={orders0_.id ,className=pl.woonkievitch.domain.Meal}}
+2018-02-03 21:44:48 DEBUG DotNode:340 - dereferenceCollection() : Created new FROM element for o.meals : Orders_Meal meal2_
+2018-02-03 21:44:48 DEBUG FromReferenceNode:60 - Resolved : o.meals -> .
+2018-02-03 21:44:48 DEBUG HqlSqlWalker:433 - createFromJoinElement() : -- join tree --
+ \-[JOIN_FRAGMENT] FromElement: 'Orders_Meal meal2_' FromElement{explicit,not a collection join,not a fetch join,fetch non-lazy properties,classAlias=meal,role=pl.woonkievitch.domain.Orders.meals,tableName=Meal,tableAlias=meal2_,origin=Orders orders0_,columns={orders0_.id ,className=pl.woonkievitch.domain.Meal}}
+
+2018-02-03 21:44:48 DEBUG FromReferenceNode:60 - Resolved : o -> orders0_.id
+2018-02-03 21:44:48 DEBUG FromReferenceNode:60 - Resolved : meal -> meal2_.id
+2018-02-03 21:44:48 DEBUG HqlSqlBaseWalker:128 - select : finishing up [level=1, statement=select]
+2018-02-03 21:44:48 DEBUG HqlSqlWalker:745 - processQuery() :  ( SELECT ( {select clause} orders0_.id ) ( FromClause{level=1} ( Orders orders0_ Orders_Meal meal2_ ) ) ( where ( in meal2_.id ( inList ? ) ) ) )
+2018-02-03 21:44:48 DEBUG JoinProcessor:187 - Using FROM fragment [Orders orders0_]
+2018-02-03 21:44:48 DEBUG JoinProcessor:187 - Using FROM fragment [inner join Orders_Meal meals1_ on orders0_.id=meals1_.orderList_id inner join Meal meal2_ on meals1_.meals_id=meal2_.id]
+2018-02-03 21:44:48 DEBUG HqlSqlBaseWalker:132 - select >> end [level=1, statement=select]
+2018-02-03 21:44:48 DEBUG QueryTranslatorImpl:269 - --- SQL AST ---
+ \-[SELECT] QueryNode: 'SELECT'  querySpaces (Orders,Orders_Meal,Meal)
+    +-[SELECT_CLAUSE] SelectClause: '{select clause}'
+    |  +-[ALIAS_REF] IdentNode: 'orders0_.id as id1_2_' {alias=o, className=pl.woonkievitch.domain.Orders, tableAlias=orders0_}
+    |  \-[SQL_TOKEN] SqlFragment: 'orders0_.status as status2_2_, orders0_.value as value3_2_'
+    +-[FROM] FromClause: 'from' FromClause{level=1, fromElementCounter=2, fromElements=2, fromElementByClassAlias=[meal, o], fromElementByTableAlias=[orders0_, meal2_], fromElementsByPath=[o.meals], collectionJoinFromElementsByPath=[], impliedElements=[]}
+    |  \-[FROM_FRAGMENT] FromElement: 'Orders orders0_' FromElement{explicit,not a collection join,not a fetch join,fetch non-lazy properties,classAlias=o,role=null,tableName=Orders,tableAlias=orders0_,origin=null,columns={,className=pl.woonkievitch.domain.Orders}}
+    |     \-[JOIN_FRAGMENT] FromElement: 'inner join Orders_Meal meals1_ on orders0_.id=meals1_.orderList_id inner join Meal meal2_ on meals1_.meals_id=meal2_.id' FromElement{explicit,not a collection join,not a fetch join,fetch non-lazy properties,classAlias=meal,role=pl.woonkievitch.domain.Orders.meals,tableName=Meal,tableAlias=meal2_,origin=Orders orders0_,columns={orders0_.id ,className=pl.woonkievitch.domain.Meal}}
+    \-[WHERE] SqlNode: 'where'
+       \-[IN] InLogicOperatorNode: 'in'
+          +-[ALIAS_REF] IdentNode: 'meal2_.id' {alias=meal, className=pl.woonkievitch.domain.Meal, tableAlias=meal2_}
+          \-[IN_LIST] SqlNode: 'inList'
+             \-[NAMED_PARAM] ParameterNode: '?' {name=meals, expectedType=org.hibernate.type.ManyToOneType(pl.woonkievitch.domain.Meal)}
+
+2018-02-03 21:44:48 DEBUG ErrorCounter:95 - throwQueryException() : no errors
+2018-02-03 21:44:48 DEBUG QueryTranslatorImpl:251 - HQL: select o from pl.woonkievitch.domain.Orders o join  o.meals meal where meal in :meals
+2018-02-03 21:44:48 DEBUG QueryTranslatorImpl:252 - SQL: select orders0_.id as id1_2_, orders0_.status as status2_2_, orders0_.value as value3_2_ from Orders orders0_ inner join Orders_Meal meals1_ on orders0_.id=meals1_.orderList_id inner join Meal meal2_ on meals1_.meals_id=meal2_.id where meal2_.id in (?)
+2018-02-03 21:44:48 DEBUG ErrorCounter:95 - throwQueryException() : no errors
+2018-02-03 21:44:48 DEBUG QueryParameterBindingsImpl:442 - Converting QueryParameterBinding to QueryParameterListBinding for given QueryParameter : org.hibernate.engine.query.spi.NamedParameterDescriptor@62f6510
+2018-02-03 21:44:48 DEBUG QueryTranslatorImpl:282 - parse() - HQL: select o from pl.woonkievitch.domain.Orders o join  o.meals meal where meal in (:meals_0, :meals_1, :meals_2, :meals_3, :meals_4, :meals_5, :meals_6, :meals_7, :meals_8, :meals_9, :meals_10, :meals_11, :meals_12, :meals_13)
+2018-02-03 21:44:48 DEBUG ErrorCounter:95 - throwQueryException() : no errors
+2018-02-03 21:44:48 DEBUG QueryTranslatorImpl:305 - --- HQL AST ---
+ \-[QUERY] Node: 'query'
+    +-[SELECT_FROM] Node: 'SELECT_FROM'
+    |  +-[FROM] Node: 'from'
+    |  |  +-[RANGE] Node: 'RANGE'
+    |  |  |  +-[DOT] Node: '.'
+    |  |  |  |  +-[DOT] Node: '.'
+    |  |  |  |  |  +-[DOT] Node: '.'
+    |  |  |  |  |  |  +-[IDENT] Node: 'pl'
+    |  |  |  |  |  |  \-[IDENT] Node: 'woonkievitch'
+    |  |  |  |  |  \-[IDENT] Node: 'domain'
+    |  |  |  |  \-[IDENT] Node: 'Orders'
+    |  |  |  \-[ALIAS] Node: 'o'
+    |  |  \-[JOIN] Node: 'join'
+    |  |     +-[DOT] Node: '.'
+    |  |     |  +-[IDENT] Node: 'o'
+    |  |     |  \-[IDENT] Node: 'meals'
+    |  |     \-[ALIAS] Node: 'meal'
+    |  \-[SELECT] Node: 'select'
+    |     \-[IDENT] Node: 'o'
+    \-[WHERE] Node: 'where'
+       \-[IN] Node: 'in'
+          +-[IDENT] Node: 'meal'
+          \-[IN_LIST] Node: 'inList'
+             +-[COLON] Node: ':'
+             |  \-[IDENT] Node: 'meals_0'
+             +-[COLON] Node: ':'
+             |  \-[IDENT] Node: 'meals_1'
+             +-[COLON] Node: ':'
+             |  \-[IDENT] Node: 'meals_2'
+             +-[COLON] Node: ':'
+             |  \-[IDENT] Node: 'meals_3'
+             +-[COLON] Node: ':'
+             |  \-[IDENT] Node: 'meals_4'
+             +-[COLON] Node: ':'
+             |  \-[IDENT] Node: 'meals_5'
+             +-[COLON] Node: ':'
+             |  \-[IDENT] Node: 'meals_6'
+             +-[COLON] Node: ':'
+             |  \-[IDENT] Node: 'meals_7'
+             +-[COLON] Node: ':'
+             |  \-[IDENT] Node: 'meals_8'
+             +-[COLON] Node: ':'
+             |  \-[IDENT] Node: 'meals_9'
+             +-[COLON] Node: ':'
+             |  \-[IDENT] Node: 'meals_10'
+             +-[COLON] Node: ':'
+             |  \-[IDENT] Node: 'meals_11'
+             +-[COLON] Node: ':'
+             |  \-[IDENT] Node: 'meals_12'
+             \-[COLON] Node: ':'
+                \-[IDENT] Node: 'meals_13'
+
+2018-02-03 21:44:48 DEBUG HqlSqlBaseWalker:124 - select << begin [level=1, statement=select]
+2018-02-03 21:44:48 DEBUG FromElement:147 - FromClause{level=1} : pl.woonkievitch.domain.Orders (o) -> orders0_
+2018-02-03 21:44:48 DEBUG FromReferenceNode:60 - Resolved : o -> orders0_.id
+2018-02-03 21:44:48 DEBUG DotNode:666 - getDataType() : meals -> org.hibernate.type.BagType(pl.woonkievitch.domain.Orders.meals)
+2018-02-03 21:44:48 DEBUG FromElementFactory:404 - createManyToMany() : path = o.meals role = pl.woonkievitch.domain.Orders.meals associatedEntityName = pl.woonkievitch.domain.Meal
+2018-02-03 21:44:48 DEBUG FromElement:147 - FromClause{level=1} : pl.woonkievitch.domain.Meal (meal) -> meal2_
+2018-02-03 21:44:48 DEBUG FromClause:287 - addJoinByPathMap() : o.meals -> FromElement{explicit,not a collection join,not a fetch join,fetch non-lazy properties,classAlias=meal,role=null,tableName=Meal,tableAlias=meal2_,origin=Orders orders0_,columns={orders0_.id ,className=pl.woonkievitch.domain.Meal}}
+2018-02-03 21:44:48 DEBUG DotNode:340 - dereferenceCollection() : Created new FROM element for o.meals : Orders_Meal meal2_
+2018-02-03 21:44:48 DEBUG FromReferenceNode:60 - Resolved : o.meals -> .
+2018-02-03 21:44:48 DEBUG HqlSqlWalker:433 - createFromJoinElement() : -- join tree --
+ \-[JOIN_FRAGMENT] FromElement: 'Orders_Meal meal2_' FromElement{explicit,not a collection join,not a fetch join,fetch non-lazy properties,classAlias=meal,role=pl.woonkievitch.domain.Orders.meals,tableName=Meal,tableAlias=meal2_,origin=Orders orders0_,columns={orders0_.id ,className=pl.woonkievitch.domain.Meal}}
+
+2018-02-03 21:44:48 DEBUG FromReferenceNode:60 - Resolved : o -> orders0_.id
+2018-02-03 21:44:48 DEBUG FromReferenceNode:60 - Resolved : meal -> meal2_.id
+2018-02-03 21:44:48 DEBUG HqlSqlBaseWalker:128 - select : finishing up [level=1, statement=select]
+2018-02-03 21:44:48 DEBUG HqlSqlWalker:745 - processQuery() :  ( SELECT ( {select clause} orders0_.id ) ( FromClause{level=1} ( Orders orders0_ Orders_Meal meal2_ ) ) ( where ( in meal2_.id ( inList ? ? ? ? ? ? ? ? ? ? ? ? ? ? ) ) ) )
+2018-02-03 21:44:48 DEBUG JoinProcessor:187 - Using FROM fragment [Orders orders0_]
+2018-02-03 21:44:48 DEBUG JoinProcessor:187 - Using FROM fragment [inner join Orders_Meal meals1_ on orders0_.id=meals1_.orderList_id inner join Meal meal2_ on meals1_.meals_id=meal2_.id]
+2018-02-03 21:44:48 DEBUG HqlSqlBaseWalker:132 - select >> end [level=1, statement=select]
+2018-02-03 21:44:48 DEBUG QueryTranslatorImpl:269 - --- SQL AST ---
+ \-[SELECT] QueryNode: 'SELECT'  querySpaces (Orders,Orders_Meal,Meal)
+    +-[SELECT_CLAUSE] SelectClause: '{select clause}'
+    |  +-[ALIAS_REF] IdentNode: 'orders0_.id as id1_2_' {alias=o, className=pl.woonkievitch.domain.Orders, tableAlias=orders0_}
+    |  \-[SQL_TOKEN] SqlFragment: 'orders0_.status as status2_2_, orders0_.value as value3_2_'
+    +-[FROM] FromClause: 'from' FromClause{level=1, fromElementCounter=2, fromElements=2, fromElementByClassAlias=[meal, o], fromElementByTableAlias=[orders0_, meal2_], fromElementsByPath=[o.meals], collectionJoinFromElementsByPath=[], impliedElements=[]}
+    |  \-[FROM_FRAGMENT] FromElement: 'Orders orders0_' FromElement{explicit,not a collection join,not a fetch join,fetch non-lazy properties,classAlias=o,role=null,tableName=Orders,tableAlias=orders0_,origin=null,columns={,className=pl.woonkievitch.domain.Orders}}
+    |     \-[JOIN_FRAGMENT] FromElement: 'inner join Orders_Meal meals1_ on orders0_.id=meals1_.orderList_id inner join Meal meal2_ on meals1_.meals_id=meal2_.id' FromElement{explicit,not a collection join,not a fetch join,fetch non-lazy properties,classAlias=meal,role=pl.woonkievitch.domain.Orders.meals,tableName=Meal,tableAlias=meal2_,origin=Orders orders0_,columns={orders0_.id ,className=pl.woonkievitch.domain.Meal}}
+    \-[WHERE] SqlNode: 'where'
+       \-[IN] InLogicOperatorNode: 'in'
+          +-[ALIAS_REF] IdentNode: 'meal2_.id' {alias=meal, className=pl.woonkievitch.domain.Meal, tableAlias=meal2_}
+          \-[IN_LIST] SqlNode: 'inList'
+             +-[NAMED_PARAM] ParameterNode: '?' {name=meals_0, expectedType=org.hibernate.type.ManyToOneType(pl.woonkievitch.domain.Meal)}
+             +-[NAMED_PARAM] ParameterNode: '?' {name=meals_1, expectedType=org.hibernate.type.ManyToOneType(pl.woonkievitch.domain.Meal)}
+             +-[NAMED_PARAM] ParameterNode: '?' {name=meals_2, expectedType=org.hibernate.type.ManyToOneType(pl.woonkievitch.domain.Meal)}
+             +-[NAMED_PARAM] ParameterNode: '?' {name=meals_3, expectedType=org.hibernate.type.ManyToOneType(pl.woonkievitch.domain.Meal)}
+             +-[NAMED_PARAM] ParameterNode: '?' {name=meals_4, expectedType=org.hibernate.type.ManyToOneType(pl.woonkievitch.domain.Meal)}
+             +-[NAMED_PARAM] ParameterNode: '?' {name=meals_5, expectedType=org.hibernate.type.ManyToOneType(pl.woonkievitch.domain.Meal)}
+             +-[NAMED_PARAM] ParameterNode: '?' {name=meals_6, expectedType=org.hibernate.type.ManyToOneType(pl.woonkievitch.domain.Meal)}
+             +-[NAMED_PARAM] ParameterNode: '?' {name=meals_7, expectedType=org.hibernate.type.ManyToOneType(pl.woonkievitch.domain.Meal)}
+             +-[NAMED_PARAM] ParameterNode: '?' {name=meals_8, expectedType=org.hibernate.type.ManyToOneType(pl.woonkievitch.domain.Meal)}
+             +-[NAMED_PARAM] ParameterNode: '?' {name=meals_9, expectedType=org.hibernate.type.ManyToOneType(pl.woonkievitch.domain.Meal)}
+             +-[NAMED_PARAM] ParameterNode: '?' {name=meals_10, expectedType=org.hibernate.type.ManyToOneType(pl.woonkievitch.domain.Meal)}
+             +-[NAMED_PARAM] ParameterNode: '?' {name=meals_11, expectedType=org.hibernate.type.ManyToOneType(pl.woonkievitch.domain.Meal)}
+             +-[NAMED_PARAM] ParameterNode: '?' {name=meals_12, expectedType=org.hibernate.type.ManyToOneType(pl.woonkievitch.domain.Meal)}
+             \-[NAMED_PARAM] ParameterNode: '?' {name=meals_13, expectedType=org.hibernate.type.ManyToOneType(pl.woonkievitch.domain.Meal)}
+
+2018-02-03 21:44:48 DEBUG ErrorCounter:95 - throwQueryException() : no errors
+2018-02-03 21:44:48 DEBUG QueryTranslatorImpl:251 - HQL: select o from pl.woonkievitch.domain.Orders o join  o.meals meal where meal in (:meals_0, :meals_1, :meals_2, :meals_3, :meals_4, :meals_5, :meals_6, :meals_7, :meals_8, :meals_9, :meals_10, :meals_11, :meals_12, :meals_13)
+2018-02-03 21:44:48 DEBUG QueryTranslatorImpl:252 - SQL: select orders0_.id as id1_2_, orders0_.status as status2_2_, orders0_.value as value3_2_ from Orders orders0_ inner join Orders_Meal meals1_ on orders0_.id=meals1_.orderList_id inner join Meal meal2_ on meals1_.meals_id=meal2_.id where meal2_.id in (? , ? , ? , ? , ? , ? , ? , ? , ? , ? , ? , ? , ? , ?)
+2018-02-03 21:44:48 DEBUG ErrorCounter:95 - throwQueryException() : no errors
+2018-02-03 21:44:48 DEBUG SQL:92 - select orders0_.id as id1_2_, orders0_.status as status2_2_, orders0_.value as value3_2_ from Orders orders0_ inner join Orders_Meal meals1_ on orders0_.id=meals1_.orderList_id inner join Meal meal2_ on meals1_.meals_id=meal2_.id where meal2_.id in (? , ? , ? , ? , ? , ? , ? , ? , ? , ? , ? , ? , ? , ?)
+2018-02-03 21:44:48 DEBUG Loader:384 - Result set row: 0
+2018-02-03 21:44:48 DEBUG Loader:1543 - Result row: EntityKey[pl.woonkievitch.domain.Orders#33]
+2018-02-03 21:44:48 DEBUG Loader:384 - Result set row: 1
+2018-02-03 21:44:48 DEBUG Loader:1543 - Result row: EntityKey[pl.woonkievitch.domain.Orders#33]
+2018-02-03 21:44:48 DEBUG Loader:384 - Result set row: 2
+2018-02-03 21:44:48 DEBUG Loader:1543 - Result row: EntityKey[pl.woonkievitch.domain.Orders#34]
+2018-02-03 21:44:48 DEBUG Loader:384 - Result set row: 3
+2018-02-03 21:44:48 DEBUG Loader:1543 - Result row: EntityKey[pl.woonkievitch.domain.Orders#34]
+2018-02-03 21:44:48 DEBUG Loader:384 - Result set row: 4
+2018-02-03 21:44:48 DEBUG Loader:1543 - Result row: EntityKey[pl.woonkievitch.domain.Orders#34]
+2018-02-03 21:44:48 DEBUG Loader:384 - Result set row: 5
+2018-02-03 21:44:48 DEBUG Loader:1543 - Result row: EntityKey[pl.woonkievitch.domain.Orders#35]
+2018-02-03 21:44:48 DEBUG Loader:384 - Result set row: 6
+2018-02-03 21:44:48 DEBUG Loader:1543 - Result row: EntityKey[pl.woonkievitch.domain.Orders#35]
+2018-02-03 21:44:48 DEBUG Loader:384 - Result set row: 7
+2018-02-03 21:44:48 DEBUG Loader:1543 - Result row: EntityKey[pl.woonkievitch.domain.Orders#35]
+2018-02-03 21:44:48 DEBUG Loader:384 - Result set row: 8
+2018-02-03 21:44:48 DEBUG Loader:1543 - Result row: EntityKey[pl.woonkievitch.domain.Orders#35]
+2018-02-03 21:44:48 DEBUG Loader:384 - Result set row: 9
+2018-02-03 21:44:48 DEBUG Loader:1543 - Result row: EntityKey[pl.woonkievitch.domain.Orders#36]
+2018-02-03 21:44:48 DEBUG Loader:384 - Result set row: 10
+2018-02-03 21:44:48 DEBUG Loader:1543 - Result row: EntityKey[pl.woonkievitch.domain.Orders#36]
+2018-02-03 21:44:48 DEBUG Loader:384 - Result set row: 11
+2018-02-03 21:44:48 DEBUG Loader:1543 - Result row: EntityKey[pl.woonkievitch.domain.Orders#36]
+2018-02-03 21:44:48 DEBUG Loader:384 - Result set row: 12
+2018-02-03 21:44:48 DEBUG Loader:1543 - Result row: EntityKey[pl.woonkievitch.domain.Orders#36]
+2018-02-03 21:44:48 DEBUG Loader:384 - Result set row: 13
+2018-02-03 21:44:48 DEBUG Loader:1543 - Result row: EntityKey[pl.woonkievitch.domain.Orders#37]
+2018-02-03 21:44:48 DEBUG Loader:384 - Result set row: 14
+2018-02-03 21:44:48 DEBUG Loader:1543 - Result row: EntityKey[pl.woonkievitch.domain.Orders#37]
+2018-02-03 21:44:48 DEBUG Loader:384 - Result set row: 15
+2018-02-03 21:44:48 DEBUG Loader:1543 - Result row: EntityKey[pl.woonkievitch.domain.Orders#37]
+2018-02-03 21:44:48 DEBUG Loader:384 - Result set row: 16
+2018-02-03 21:44:48 DEBUG Loader:1543 - Result row: EntityKey[pl.woonkievitch.domain.Orders#38]
+2018-02-03 21:44:48 DEBUG Loader:384 - Result set row: 17
+2018-02-03 21:44:48 DEBUG Loader:1543 - Result row: EntityKey[pl.woonkievitch.domain.Orders#38]
+2018-02-03 21:44:48 DEBUG Loader:384 - Result set row: 18
+2018-02-03 21:44:48 DEBUG Loader:1543 - Result row: EntityKey[pl.woonkievitch.domain.Orders#38]
+2018-02-03 21:44:48 DEBUG TwoPhaseLoad:141 - Resolving associations for [pl.woonkievitch.domain.Orders#33]
+2018-02-03 21:44:48 DEBUG TwoPhaseLoad:281 - Done materializing entity [pl.woonkievitch.domain.Orders#33]
+2018-02-03 21:44:48 DEBUG TwoPhaseLoad:141 - Resolving associations for [pl.woonkievitch.domain.Orders#34]
+2018-02-03 21:44:48 DEBUG TwoPhaseLoad:281 - Done materializing entity [pl.woonkievitch.domain.Orders#34]
+2018-02-03 21:44:48 DEBUG TwoPhaseLoad:141 - Resolving associations for [pl.woonkievitch.domain.Orders#35]
+2018-02-03 21:44:48 DEBUG TwoPhaseLoad:281 - Done materializing entity [pl.woonkievitch.domain.Orders#35]
+2018-02-03 21:44:48 DEBUG TwoPhaseLoad:141 - Resolving associations for [pl.woonkievitch.domain.Orders#36]
+2018-02-03 21:44:48 DEBUG TwoPhaseLoad:281 - Done materializing entity [pl.woonkievitch.domain.Orders#36]
+2018-02-03 21:44:48 DEBUG TwoPhaseLoad:141 - Resolving associations for [pl.woonkievitch.domain.Orders#37]
+2018-02-03 21:44:48 DEBUG TwoPhaseLoad:281 - Done materializing entity [pl.woonkievitch.domain.Orders#37]
+2018-02-03 21:44:48 DEBUG TwoPhaseLoad:141 - Resolving associations for [pl.woonkievitch.domain.Orders#38]
+2018-02-03 21:44:48 DEBUG TwoPhaseLoad:281 - Done materializing entity [pl.woonkievitch.domain.Orders#38]
+2018-02-03 21:44:48 DEBUG LogicalConnectionManagedImpl:170 - Initiating JDBC connection release from afterTransaction
+2018-02-03 21:44:48 DEBUG AbstractLoadPlanBasedCollectionInitializer:73 - Loading collection: [pl.woonkievitch.domain.Orders.meals#33]
+2018-02-03 21:44:48 DEBUG SQL:92 - select meals0_.orderList_id as orderLis1_3_0_, meals0_.meals_id as meals_id2_3_0_, meal1_.id as id1_1_1_, meal1_.imgUrl as imgUrl2_1_1_, meal1_.kcal as kcal3_1_1_, meal1_.name as name4_1_1_, meal1_.price as price5_1_1_ from Orders_Meal meals0_ inner join Meal meal1_ on meals0_.meals_id=meal1_.id where meals0_.orderList_id=?
+2018-02-03 21:44:48 DEBUG ResultSetProcessorImpl:161 - Preparing collection intializer : [pl.woonkievitch.domain.Orders.meals#33]
+2018-02-03 21:44:48 DEBUG ResultSetProcessorImpl:120 - Starting ResultSet row #0
+2018-02-03 21:44:48 DEBUG CollectionReferenceInitializerImpl:60 - Found row of collection: [pl.woonkievitch.domain.Orders.meals#33]
+2018-02-03 21:44:48 DEBUG ResultSetProcessorImpl:120 - Starting ResultSet row #1
+2018-02-03 21:44:48 DEBUG CollectionReferenceInitializerImpl:60 - Found row of collection: [pl.woonkievitch.domain.Orders.meals#33]
+2018-02-03 21:44:48 DEBUG CollectionLoadContext:394 - 1 collections were found in result set for role: pl.woonkievitch.domain.Orders.meals
+2018-02-03 21:44:48 DEBUG CollectionLoadContext:265 - Collection fully initialized: [pl.woonkievitch.domain.Orders.meals#33]
+2018-02-03 21:44:48 DEBUG CollectionLoadContext:394 - 1 collections initialized for role: pl.woonkievitch.domain.Orders.meals
+2018-02-03 21:44:48 DEBUG ResourceRegistryStandardImpl:73 - HHH000387: ResultSet's statement was not registered
+2018-02-03 21:44:48 DEBUG AbstractLoadPlanBasedCollectionInitializer:105 - Done loading collection
+2018-02-03 21:44:48 DEBUG AbstractLoadPlanBasedCollectionInitializer:73 - Loading collection: [pl.woonkievitch.domain.Orders.meals#34]
+2018-02-03 21:44:48 DEBUG SQL:92 - select meals0_.orderList_id as orderLis1_3_0_, meals0_.meals_id as meals_id2_3_0_, meal1_.id as id1_1_1_, meal1_.imgUrl as imgUrl2_1_1_, meal1_.kcal as kcal3_1_1_, meal1_.name as name4_1_1_, meal1_.price as price5_1_1_ from Orders_Meal meals0_ inner join Meal meal1_ on meals0_.meals_id=meal1_.id where meals0_.orderList_id=?
+2018-02-03 21:44:48 DEBUG ResultSetProcessorImpl:161 - Preparing collection intializer : [pl.woonkievitch.domain.Orders.meals#34]
+2018-02-03 21:44:48 DEBUG ResultSetProcessorImpl:120 - Starting ResultSet row #0
+2018-02-03 21:44:48 DEBUG CollectionReferenceInitializerImpl:60 - Found row of collection: [pl.woonkievitch.domain.Orders.meals#34]
+2018-02-03 21:44:48 DEBUG ResultSetProcessorImpl:120 - Starting ResultSet row #1
+2018-02-03 21:44:48 DEBUG CollectionReferenceInitializerImpl:60 - Found row of collection: [pl.woonkievitch.domain.Orders.meals#34]
+2018-02-03 21:44:48 DEBUG ResultSetProcessorImpl:120 - Starting ResultSet row #2
+2018-02-03 21:44:48 DEBUG CollectionReferenceInitializerImpl:60 - Found row of collection: [pl.woonkievitch.domain.Orders.meals#34]
+2018-02-03 21:44:48 DEBUG CollectionLoadContext:394 - 1 collections were found in result set for role: pl.woonkievitch.domain.Orders.meals
+2018-02-03 21:44:48 DEBUG CollectionLoadContext:265 - Collection fully initialized: [pl.woonkievitch.domain.Orders.meals#34]
+2018-02-03 21:44:48 DEBUG CollectionLoadContext:394 - 1 collections initialized for role: pl.woonkievitch.domain.Orders.meals
+2018-02-03 21:44:48 DEBUG ResourceRegistryStandardImpl:73 - HHH000387: ResultSet's statement was not registered
+2018-02-03 21:44:48 DEBUG AbstractLoadPlanBasedCollectionInitializer:105 - Done loading collection
+2018-02-03 21:44:48 DEBUG AbstractLoadPlanBasedCollectionInitializer:73 - Loading collection: [pl.woonkievitch.domain.Orders.meals#35]
+2018-02-03 21:44:48 DEBUG SQL:92 - select meals0_.orderList_id as orderLis1_3_0_, meals0_.meals_id as meals_id2_3_0_, meal1_.id as id1_1_1_, meal1_.imgUrl as imgUrl2_1_1_, meal1_.kcal as kcal3_1_1_, meal1_.name as name4_1_1_, meal1_.price as price5_1_1_ from Orders_Meal meals0_ inner join Meal meal1_ on meals0_.meals_id=meal1_.id where meals0_.orderList_id=?
+2018-02-03 21:44:48 DEBUG ResultSetProcessorImpl:161 - Preparing collection intializer : [pl.woonkievitch.domain.Orders.meals#35]
+2018-02-03 21:44:48 DEBUG ResultSetProcessorImpl:120 - Starting ResultSet row #0
+2018-02-03 21:44:48 DEBUG CollectionReferenceInitializerImpl:60 - Found row of collection: [pl.woonkievitch.domain.Orders.meals#35]
+2018-02-03 21:44:48 DEBUG ResultSetProcessorImpl:120 - Starting ResultSet row #1
+2018-02-03 21:44:48 DEBUG CollectionReferenceInitializerImpl:60 - Found row of collection: [pl.woonkievitch.domain.Orders.meals#35]
+2018-02-03 21:44:48 DEBUG ResultSetProcessorImpl:120 - Starting ResultSet row #2
+2018-02-03 21:44:48 DEBUG CollectionReferenceInitializerImpl:60 - Found row of collection: [pl.woonkievitch.domain.Orders.meals#35]
+2018-02-03 21:44:48 DEBUG ResultSetProcessorImpl:120 - Starting ResultSet row #3
+2018-02-03 21:44:48 DEBUG CollectionReferenceInitializerImpl:60 - Found row of collection: [pl.woonkievitch.domain.Orders.meals#35]
+2018-02-03 21:44:48 DEBUG CollectionLoadContext:394 - 1 collections were found in result set for role: pl.woonkievitch.domain.Orders.meals
+2018-02-03 21:44:48 DEBUG CollectionLoadContext:265 - Collection fully initialized: [pl.woonkievitch.domain.Orders.meals#35]
+2018-02-03 21:44:48 DEBUG CollectionLoadContext:394 - 1 collections initialized for role: pl.woonkievitch.domain.Orders.meals
+2018-02-03 21:44:48 DEBUG ResourceRegistryStandardImpl:73 - HHH000387: ResultSet's statement was not registered
+2018-02-03 21:44:48 DEBUG AbstractLoadPlanBasedCollectionInitializer:105 - Done loading collection
+2018-02-03 21:44:48 DEBUG AbstractLoadPlanBasedCollectionInitializer:73 - Loading collection: [pl.woonkievitch.domain.Orders.meals#36]
+2018-02-03 21:44:48 DEBUG SQL:92 - select meals0_.orderList_id as orderLis1_3_0_, meals0_.meals_id as meals_id2_3_0_, meal1_.id as id1_1_1_, meal1_.imgUrl as imgUrl2_1_1_, meal1_.kcal as kcal3_1_1_, meal1_.name as name4_1_1_, meal1_.price as price5_1_1_ from Orders_Meal meals0_ inner join Meal meal1_ on meals0_.meals_id=meal1_.id where meals0_.orderList_id=?
+2018-02-03 21:44:48 DEBUG ResultSetProcessorImpl:161 - Preparing collection intializer : [pl.woonkievitch.domain.Orders.meals#36]
+2018-02-03 21:44:48 DEBUG ResultSetProcessorImpl:120 - Starting ResultSet row #0
+2018-02-03 21:44:48 DEBUG CollectionReferenceInitializerImpl:60 - Found row of collection: [pl.woonkievitch.domain.Orders.meals#36]
+2018-02-03 21:44:48 DEBUG ResultSetProcessorImpl:120 - Starting ResultSet row #1
+2018-02-03 21:44:48 DEBUG CollectionReferenceInitializerImpl:60 - Found row of collection: [pl.woonkievitch.domain.Orders.meals#36]
+2018-02-03 21:44:48 DEBUG ResultSetProcessorImpl:120 - Starting ResultSet row #2
+2018-02-03 21:44:48 DEBUG CollectionReferenceInitializerImpl:60 - Found row of collection: [pl.woonkievitch.domain.Orders.meals#36]
+2018-02-03 21:44:48 DEBUG ResultSetProcessorImpl:120 - Starting ResultSet row #3
+2018-02-03 21:44:48 DEBUG CollectionReferenceInitializerImpl:60 - Found row of collection: [pl.woonkievitch.domain.Orders.meals#36]
+2018-02-03 21:44:48 DEBUG CollectionLoadContext:394 - 1 collections were found in result set for role: pl.woonkievitch.domain.Orders.meals
+2018-02-03 21:44:48 DEBUG CollectionLoadContext:265 - Collection fully initialized: [pl.woonkievitch.domain.Orders.meals#36]
+2018-02-03 21:44:48 DEBUG CollectionLoadContext:394 - 1 collections initialized for role: pl.woonkievitch.domain.Orders.meals
+2018-02-03 21:44:48 DEBUG ResourceRegistryStandardImpl:73 - HHH000387: ResultSet's statement was not registered
+2018-02-03 21:44:48 DEBUG AbstractLoadPlanBasedCollectionInitializer:105 - Done loading collection
+2018-02-03 21:44:48 DEBUG AbstractLoadPlanBasedCollectionInitializer:73 - Loading collection: [pl.woonkievitch.domain.Orders.meals#37]
+2018-02-03 21:44:48 DEBUG SQL:92 - select meals0_.orderList_id as orderLis1_3_0_, meals0_.meals_id as meals_id2_3_0_, meal1_.id as id1_1_1_, meal1_.imgUrl as imgUrl2_1_1_, meal1_.kcal as kcal3_1_1_, meal1_.name as name4_1_1_, meal1_.price as price5_1_1_ from Orders_Meal meals0_ inner join Meal meal1_ on meals0_.meals_id=meal1_.id where meals0_.orderList_id=?
+2018-02-03 21:44:48 DEBUG ResultSetProcessorImpl:161 - Preparing collection intializer : [pl.woonkievitch.domain.Orders.meals#37]
+2018-02-03 21:44:48 DEBUG ResultSetProcessorImpl:120 - Starting ResultSet row #0
+2018-02-03 21:44:48 DEBUG CollectionReferenceInitializerImpl:60 - Found row of collection: [pl.woonkievitch.domain.Orders.meals#37]
+2018-02-03 21:44:48 DEBUG ResultSetProcessorImpl:120 - Starting ResultSet row #1
+2018-02-03 21:44:48 DEBUG CollectionReferenceInitializerImpl:60 - Found row of collection: [pl.woonkievitch.domain.Orders.meals#37]
+2018-02-03 21:44:48 DEBUG ResultSetProcessorImpl:120 - Starting ResultSet row #2
+2018-02-03 21:44:48 DEBUG CollectionReferenceInitializerImpl:60 - Found row of collection: [pl.woonkievitch.domain.Orders.meals#37]
+2018-02-03 21:44:48 DEBUG CollectionLoadContext:394 - 1 collections were found in result set for role: pl.woonkievitch.domain.Orders.meals
+2018-02-03 21:44:48 DEBUG CollectionLoadContext:265 - Collection fully initialized: [pl.woonkievitch.domain.Orders.meals#37]
+2018-02-03 21:44:48 DEBUG CollectionLoadContext:394 - 1 collections initialized for role: pl.woonkievitch.domain.Orders.meals
+2018-02-03 21:44:48 DEBUG ResourceRegistryStandardImpl:73 - HHH000387: ResultSet's statement was not registered
+2018-02-03 21:44:48 DEBUG AbstractLoadPlanBasedCollectionInitializer:105 - Done loading collection
+2018-02-03 21:44:48 DEBUG AbstractLoadPlanBasedCollectionInitializer:73 - Loading collection: [pl.woonkievitch.domain.Orders.meals#38]
+2018-02-03 21:44:48 DEBUG SQL:92 - select meals0_.orderList_id as orderLis1_3_0_, meals0_.meals_id as meals_id2_3_0_, meal1_.id as id1_1_1_, meal1_.imgUrl as imgUrl2_1_1_, meal1_.kcal as kcal3_1_1_, meal1_.name as name4_1_1_, meal1_.price as price5_1_1_ from Orders_Meal meals0_ inner join Meal meal1_ on meals0_.meals_id=meal1_.id where meals0_.orderList_id=?
+2018-02-03 21:44:48 DEBUG ResultSetProcessorImpl:161 - Preparing collection intializer : [pl.woonkievitch.domain.Orders.meals#38]
+2018-02-03 21:44:48 DEBUG ResultSetProcessorImpl:120 - Starting ResultSet row #0
+2018-02-03 21:44:48 DEBUG CollectionReferenceInitializerImpl:60 - Found row of collection: [pl.woonkievitch.domain.Orders.meals#38]
+2018-02-03 21:44:48 DEBUG ResultSetProcessorImpl:120 - Starting ResultSet row #1
+2018-02-03 21:44:48 DEBUG CollectionReferenceInitializerImpl:60 - Found row of collection: [pl.woonkievitch.domain.Orders.meals#38]
+2018-02-03 21:44:48 DEBUG ResultSetProcessorImpl:120 - Starting ResultSet row #2
+2018-02-03 21:44:48 DEBUG CollectionReferenceInitializerImpl:60 - Found row of collection: [pl.woonkievitch.domain.Orders.meals#38]
+2018-02-03 21:44:48 DEBUG CollectionLoadContext:394 - 1 collections were found in result set for role: pl.woonkievitch.domain.Orders.meals
+2018-02-03 21:44:48 DEBUG CollectionLoadContext:265 - Collection fully initialized: [pl.woonkievitch.domain.Orders.meals#38]
+2018-02-03 21:44:48 DEBUG CollectionLoadContext:394 - 1 collections initialized for role: pl.woonkievitch.domain.Orders.meals
+2018-02-03 21:44:48 DEBUG ResourceRegistryStandardImpl:73 - HHH000387: ResultSet's statement was not registered
+2018-02-03 21:44:48 DEBUG AbstractLoadPlanBasedCollectionInitializer:105 - Done loading collection
